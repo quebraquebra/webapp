@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Lalezar');
 @import '../node_modules/font-awesome/css/font-awesome.min.css';
 
 $buttonColor: #303e52;
@@ -21,8 +22,6 @@ body { overflow: hidden }
 
     #main-menu {
       bottom: 4rem;
-      font-size: 2.5rem;
-      font-weight: 700;
       position: absolute;
       text-align: center;
       width: 100%;
@@ -34,13 +33,15 @@ body { overflow: hidden }
 
         li {
           display: inline-block;
-          margin: 0 .3rem .2rem;
+          margin: 0 .5rem .2rem;
 
           button {
             background: transparent;
             border: none;
             color: $buttonColor;
             display: block;
+            font-family: 'Lalezar', cursive;
+            font-size: 3.2rem;
             outline: none;
             padding: 0;
             text-decoration: none;
