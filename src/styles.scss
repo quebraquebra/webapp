@@ -1,10 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Lalezar');
+@import url('https://fonts.googleapis.com/css?family=Lalezar|Roboto');
 @import '../node_modules/font-awesome/css/font-awesome.min.css';
 
 $buttonColor: #303e52;
 $buttonColorHover: #414f65;
 
-body { overflow: hidden }
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  overflow: hidden;
+}
 
 /**
  * Home
@@ -71,11 +75,16 @@ body { overflow: hidden }
   .modal-dialog {
     height: 100vh;
     margin: 0;
+    overflow: auto;
     width: 100vw;
   }
 
   .modal-content {
     background-color: #acd473;
+    background-image: url(./assets/img/wallpaper.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 0;
     height: auto;
     min-height: 100%;
@@ -107,6 +116,13 @@ body { overflow: hidden }
       }
 
       .btn-back:hover { color: $buttonColorHover }
+    }
+
+    .full-modal-body {
+      box-shadow: 0 0 5px #414F65;
+      overflow: auto;
+      height: calc(100vh - 110px);
+      padding: 20px;
     }
   }
 }
