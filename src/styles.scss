@@ -1,0 +1,111 @@
+@import '../node_modules/font-awesome/css/font-awesome.min.css';
+
+$buttonColor: #303e52;
+$buttonColorHover: #414f65;
+
+body { overflow: hidden }
+
+/**
+ * Home
+ */
+
+#wallpaper {
+    background-color: #acd473;
+    background-image: url(./assets/img/logo.png), url(./assets/img/wallpaper.jpg);
+    background-position: 50%, bottom;
+    background-repeat: no-repeat;
+    background-size: 50%, cover;
+    height: 100vh;
+    position: relative;
+    width: 100vw;
+
+    #main-menu {
+      bottom: 4rem;
+      font-size: 2.5rem;
+      font-weight: 700;
+      position: absolute;
+      text-align: center;
+      width: 100%;
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          display: inline-block;
+          margin: 0 .3rem .2rem;
+
+          button {
+            background: transparent;
+            border: none;
+            color: $buttonColor;
+            display: block;
+            outline: none;
+            padding: 0;
+            text-decoration: none;
+            transition: .5s;
+          }
+
+          button:hover { color: $buttonColorHover }
+        }
+      }
+  }
+}
+
+@media screen and (orientation: landscape) {
+  #wallpaper { background-size: 25%, cover }
+}
+
+@media screen and (min-width: 720px) {
+  #wallpaper { background-size: auto 40%, cover }
+}
+
+/**
+ * Modal
+ */
+
+.modal {
+
+  .modal-dialog {
+    height: 100vh;
+    margin: 0;
+    width: 100vw;
+  }
+
+  .modal-content {
+    background-color: #acd473;
+    border-radius: 0;
+    height: auto;
+    min-height: 100%;
+    padding: 1.5rem;
+
+    .full-modal-header {
+      height: 50px;
+      margin-bottom: 20px;
+      position: relative;
+
+      .logo {
+        height: 100%;
+        position: absolute;
+      }
+
+      .btn-back {
+        background: transparent;
+        border: none;
+        color: $buttonColor;
+        display: inline-block;
+        font-size: 20px;
+        font-weight: bold;
+        height: auto;
+        line-height: 20px;
+        padding: 0;
+        position: absolute;
+        right: 0;
+        top: 15px;
+      }
+
+      .btn-back:hover { color: $buttonColorHover }
+    }
+  }
+}
