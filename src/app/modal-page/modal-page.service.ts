@@ -1,7 +1,8 @@
 import { Injectable, Type } from '@angular/core';
 
 import { ModalPage } from '.';
-import { SobreComponent } from './../sobre';
+import { FolhaCamaraComponent } from '../folha-camara';
+import { SobreComponent } from '../sobre';
 
 @Injectable()
 export class ModalPageService {
@@ -11,6 +12,7 @@ export class ModalPageService {
 
   public constructor() {
     this._components = [];
+    this._components[ModalPage.FOLHA_CAMARA] = FolhaCamaraComponent;
     this._components[ModalPage.SOBRE] = SobreComponent;
   }
 

@@ -1,4 +1,4 @@
-import { FolhaCamara } from './../model/folha-camara';
+import { FolhaCamara } from '.';
 
 export class FolhaCamaraFactory {
 

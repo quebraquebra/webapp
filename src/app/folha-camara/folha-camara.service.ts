@@ -1,6 +1,6 @@
-import { FolhaCamaraFactory } from './../factory/folha-camara-factory';
-import { FolhaCamara } from './../model/folha-camara';
 import { Injectable } from '@angular/core';
+
+import { FolhaCamara, FolhaCamaraFactory } from '.';
 import { Http } from '@angular/http';
 
 import { Observable } from 'rxjs/Rx';
