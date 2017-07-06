@@ -1,17 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { FolhaCamaraComponent, FolhaCamaraService } from '.';
 import { Ng2TableModule } from 'ng2-table';
-import { Ng2BootstrapModule } from 'ng2-bootstrap';
+import { PaginationModule } from 'ngx-bootstrap';
 
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
     HttpModule,
     Ng2TableModule,
-    Ng2BootstrapModule.forRoot()
+    PaginationModule.forRoot()
   ],
   declarations: [FolhaCamaraComponent],
   exports: [FolhaCamaraComponent],
