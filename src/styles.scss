@@ -123,8 +123,8 @@ body {
       overflow: auto;
       height: calc(100vh - 110px);
       padding: 20px;
+
+      table { background-color: #fff }
     }
   }
 }
-
-.dataTable { background-color: #fff }
