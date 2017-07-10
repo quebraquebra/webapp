@@ -1,27 +1,65 @@
 <h1>Folha Câmara</h1>
 
 <div class="row">
-  <div class="col-md-4">
-    <input *ngIf="config.filtering" class="form-control" placeholder="Filter all columns"
-          [ngTableFiltering]="config.filtering"
-          (tableChanged)="onChangeTable(config)"/>
+  <div class="form-group col-sm-4">
+    <label for="quantidade-registros" class="control-label">Quantidade de registros:</label>
+    <select id="quantidade-registros" class="form-control" [(ngModel)]="filter.limit">
+      <option value="10">10</option>
+      <option value="20">20</option>
+      <option value="30">30</option>
+      <option value="50">50</option>
+    </select>
+  </div> <!--/.form-group-->
+  <div class="form-group col-sm-4">
+    <label for="ano" class="control-label">Ano:</label>
+    <select id="ano" class="form-control" [(ngModel)]="filter.ano">
+      <option value="2017">2017</option>
+      <option value="2016">2016</option>
+    </select>
+  </div> <!--/.form-group-->
+  <div class="form-group col-sm-4">
+    <label for="mes" class="control-label">Mês:</label>
+    <select id="mes" class="form-control" [(ngModel)]="filter.mes">
+      <option value="12">Dezembro</option>
+      <option value="11">Novembro</option>
+      <option value="10">Outubro</option>
+      <option value="9">Setembro</option>
+      <option value="8">Agosto</option>
+      <option value="7">Julho</option>
+      <option value="6">Junho</option>
+      <option value="5">Maio</option>
+      <option value="4">Abril</option>
+      <option value="3">Março</option>
+      <option value="2">Fevereiro</option>
+      <option value="1">Janeiro</option>
+    </select>
+  </div> <!--/.form-group-->
+  <div class="form-group col-sm-4">
+    <label for="nome" class="control-label">Nome:</label>
+    <input class="form-control" [(ngModel)]="filter.nome" />
+  </div> <!--/.form-group-->
+  <div class="form-group col-sm-4">
+    <label for="vinculo" class="control-label">Vínculo:</label>
+    <input class="form-control" [(ngModel)]="filter.vinculo" />
+  </div> <!--/.form-group-->
+  <div class="form-group col-sm-4">
+    <label for="cargo" class="control-label">Cargo:</label>
+    <input class="form-control" [(ngModel)]="filter.cargo" />
+  </div> <!--/.form-group-->
+  <div class="form-group col-sm-4" (click)="search($event)">
+    <button class="btn btn-success btn-search">
+      Pesquisar
+    </button>
   </div>
-</div>
-<br>
-<ng-table [config]="config"
-          (tableChanged)="onChangeTable(config)"
-          (cellClicked)="onCellClick($event)"
-          [rows]="rows" [columns]="columns">
-</ng-table>
-<pagination *ngIf="config.paging"
-            class="pagination-sm"
-            [(ngModel)]="page"
-            [totalItems]="length"
-            [itemsPerPage]="itemsPerPage"
-            [maxSize]="maxSize"
-            [boundaryLinks]="true"
-            [rotate]="false"
-            (pageChanged)="onChangeTable(config, $event)"
-            (numPages)="numPages = $event">
-</pagination>
-<pre *ngIf="config.paging" class="card card-block card-header">Page: {{page}} / {{numPages}}</pre>
+</div> <!--/.row-->
+
+<generic-table #folhaCamaraTable
+  gtClasses="table-hover"
+  [gtSettings]="configObject.settings"
+  [gtFields]="configObject.fields"
+  [(gtData)]="configObject.data"
+  [gtInfo]="configObject.info"
+  (gtEvent)="onTableEvent($event)"
+  [gtOptions]="{ highlightSearch: true, lazyLoad: true, rowSelection: true }">
+</generic-table>
+<gt-pagination gtClasses="justify-content-center" [genericTable]="folhaCamaraTable"></gt-pagination>
