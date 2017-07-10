@@ -1,57 +1,57 @@
 <h1>Folha Câmara</h1>
 
-<div class="row">
-  <div class="form-group col-sm-4">
-    <label for="quantidade-registros" class="control-label">Quantidade de registros:</label>
-    <select id="quantidade-registros" class="form-control" [(ngModel)]="filter.limit">
-      <option value="10">10</option>
-      <option value="20">20</option>
-      <option value="30">30</option>
-      <option value="50">50</option>
-    </select>
-  </div> <!--/.form-group-->
-  <div class="form-group col-sm-4">
-    <label for="ano" class="control-label">Ano:</label>
-    <select id="ano" class="form-control" [(ngModel)]="filter.ano">
-      <option value="2017">2017</option>
-      <option value="2016">2016</option>
-    </select>
-  </div> <!--/.form-group-->
-  <div class="form-group col-sm-4">
-    <label for="mes" class="control-label">Mês:</label>
-    <select id="mes" class="form-control" [(ngModel)]="filter.mes">
-      <option value="12">Dezembro</option>
-      <option value="11">Novembro</option>
-      <option value="10">Outubro</option>
-      <option value="9">Setembro</option>
-      <option value="8">Agosto</option>
-      <option value="7">Julho</option>
-      <option value="6">Junho</option>
-      <option value="5">Maio</option>
-      <option value="4">Abril</option>
-      <option value="3">Março</option>
-      <option value="2">Fevereiro</option>
-      <option value="1">Janeiro</option>
-    </select>
-  </div> <!--/.form-group-->
-  <div class="form-group col-sm-4">
-    <label for="nome" class="control-label">Nome:</label>
-    <input class="form-control" [(ngModel)]="filter.nome" />
-  </div> <!--/.form-group-->
-  <div class="form-group col-sm-4">
-    <label for="vinculo" class="control-label">Vínculo:</label>
-    <input class="form-control" [(ngModel)]="filter.vinculo" />
-  </div> <!--/.form-group-->
-  <div class="form-group col-sm-4">
-    <label for="cargo" class="control-label">Cargo:</label>
-    <input class="form-control" [(ngModel)]="filter.cargo" />
-  </div> <!--/.form-group-->
-  <div class="form-group col-sm-4" (click)="filter.page = 1; search($event)">
-    <button class="btn btn-success btn-search">
-      Pesquisar
-    </button>
-  </div>
-</div> <!--/.row-->
+<form (ngSubmit)="filter.page = 1; search($event)" novalidate>
+  <div class="row">
+    <div class="form-group col-sm-4">
+      <label for="quantidade-registros" class="control-label">Quantidade de registros:</label>
+      <select id="quantidade-registros" class="form-control" name="limit" [(ngModel)]="filter.limit">
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="30">30</option>
+        <option value="50">50</option>
+      </select>
+    </div> <!--/.form-group-->
+    <div class="form-group col-sm-4">
+      <label for="ano" class="control-label">Ano:</label>
+      <select id="ano" class="form-control" name="ano" [(ngModel)]="filter.ano">
+        <option value="2017">2017</option>
+        <option value="2016">2016</option>
+      </select>
+    </div> <!--/.form-group-->
+    <div class="form-group col-sm-4">
+      <label for="mes" class="control-label">Mês:</label>
+      <select id="mes" class="form-control" name="mes" [(ngModel)]="filter.mes">
+        <option value="12">Dezembro</option>
+        <option value="11">Novembro</option>
+        <option value="10">Outubro</option>
+        <option value="9">Setembro</option>
+        <option value="8">Agosto</option>
+        <option value="7">Julho</option>
+        <option value="6">Junho</option>
+        <option value="5">Maio</option>
+        <option value="4">Abril</option>
+        <option value="3">Março</option>
+        <option value="2">Fevereiro</option>
+        <option value="1">Janeiro</option>
+      </select>
+    </div> <!--/.form-group-->
+    <div class="form-group col-sm-4">
+      <label for="nome" class="control-label">Nome:</label>
+      <input id="nome" class="form-control" name="nome" [(ngModel)]="filter.nome" />
+    </div> <!--/.form-group-->
+    <div class="form-group col-sm-4">
+      <label for="vinculo" class="control-label">Vínculo:</label>
+      <input id="vinculo" class="form-control" name="vinculo" [(ngModel)]="filter.vinculo" />
+    </div> <!--/.form-group-->
+    <div class="form-group col-sm-4">
+      <label for="cargo" class="control-label">Cargo:</label>
+      <input id="cargo" class="form-control" name="cargo" [(ngModel)]="filter.cargo" />
+    </div> <!--/.form-group-->
+    <div class="form-group col-sm-4">
+      <input type="submit" class="btn btn-success btn-search" value="Pesquisar" />
+    </div>
+  </div> <!--/.row-->
+</form>
 
 <generic-table #folhaCamaraTable
   gtClasses="table-bordered table-striped table-hover"
