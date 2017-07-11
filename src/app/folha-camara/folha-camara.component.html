@@ -60,6 +60,7 @@
   [(gtData)]="configObject.data"
   [gtInfo]="configObject.info"
   (gtEvent)="onTableEvent($event)"
-  [gtOptions]="{ lazyLoad: true, cache: true }">
+  [gtOptions]="{ lazyLoad: true, cache: true }"
+  [gtTexts]="gtTexts">
 </generic-table>
 <gt-pagination gtClasses="justify-content-center" [genericTable]="folhaCamaraTable"></gt-pagination>

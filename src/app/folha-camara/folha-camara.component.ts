@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { FolhaCamaraService, FolhaCamara, FolhaCamaraFilter } from '.';
 import { Modal } from 'angular2-modal/plugins/bootstrap';
-import { GtConfig } from '@angular-generic-table/core';
+import { GtConfig, GtTexts } from '@angular-generic-table/core';
+import { gtTexts } from '../shared/util/angular-generic-table';
 
 @Component({
   selector: 'app-folha-camara',
@@ -13,6 +14,7 @@ export class FolhaCamaraComponent implements OnInit {
 
   public configObject: GtConfig<any>;
   public filter: FolhaCamaraFilter;
+  public gtTexts: GtTexts;
   public total: number;
 
   public constructor(private modal: Modal, private folhaCamaraService: FolhaCamaraService) {
@@ -27,6 +29,7 @@ export class FolhaCamaraComponent implements OnInit {
       cargo: ''
     }
     this.total = 0;
+    this.gtTexts = gtTexts['pt-BR'];
 
     this.configObject = {
       settings: [
