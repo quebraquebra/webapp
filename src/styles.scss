@@ -125,6 +125,15 @@ body {
       padding: 20px;
 
       table { background-color: #fff }
+
+      .btn-search {
+        background-color: #3a3f57;
+        border-color: #3a3f57;
+      }
+      .btn-search:hover {
+        background-color: #303e52;
+        border-color: #303e52;
+      }
     }
   }
 }
