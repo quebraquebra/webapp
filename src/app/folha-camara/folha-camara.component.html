@@ -55,12 +55,13 @@
 
 <generic-table #folhaCamaraTable
   gtClasses="table-bordered table-striped table-hover"
-  [gtSettings]="configObject.settings"
-  [gtFields]="configObject.fields"
-  [(gtData)]="configObject.data"
-  [gtInfo]="configObject.info"
+  [gtSettings]="gtConfig.settings"
+  [gtFields]="gtConfig.fields"
+  [(gtData)]="gtConfig.data"
+  [gtInfo]="gtConfig.info"
   (gtEvent)="onTableEvent($event)"
   [gtOptions]="{ lazyLoad: true, cache: true }"
-  [gtTexts]="gtTexts">
+  [gtTexts]="gtTexts"
+  [gtRowComponent]="gtRowComponent">
 </generic-table>
 <gt-pagination gtClasses="justify-content-center" [genericTable]="folhaCamaraTable"></gt-pagination>

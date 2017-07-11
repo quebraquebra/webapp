@@ -3,15 +3,17 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { FolhaCamaraComponent, FolhaCamaraService } from '.';
 import { GenericTableModule } from '@angular-generic-table/core';
+import { FolhaCamaraComponent, FolhaCamaraService } from '.';
+import { PerfilModule } from './perfil';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     HttpModule,
-    GenericTableModule
+    GenericTableModule,
+    PerfilModule
   ],
   declarations: [FolhaCamaraComponent],
   exports: [FolhaCamaraComponent],

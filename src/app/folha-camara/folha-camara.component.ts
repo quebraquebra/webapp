@@ -1,19 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Type } from '@angular/core';
 
 import { FolhaCamaraService, FolhaCamara, FolhaCamaraFilter } from '.';
 import { Modal } from 'angular2-modal/plugins/bootstrap';
 import { GtConfig, GtTexts } from '@angular-generic-table/core';
 import { gtTexts } from '../shared/util/angular-generic-table';
+import { PerfilComponent } from './perfil';
 
 @Component({
   selector: 'app-folha-camara',
   templateUrl: './folha-camara.component.html',
-  styleUrls: ['./folha-camara.component.scss']
+  styleUrls: ['./folha-camara.component.scss'],
+  entryComponents: [PerfilComponent]
 })
 export class FolhaCamaraComponent implements OnInit {
 
-  public configObject: GtConfig<any>;
   public filter: FolhaCamaraFilter;
+  public gtConfig: GtConfig<any>;
+  public gtRowComponent: Type<any> = PerfilComponent;
   public gtTexts: GtTexts;
   public total: number;
 
@@ -31,7 +34,7 @@ export class FolhaCamaraComponent implements OnInit {
     this.total = 0;
     this.gtTexts = gtTexts['pt-BR'];
 
-    this.configObject = {
+    this.gtConfig = {
       settings: [
         { objectKey: 'nome' },
         { objectKey: 'vinculo' },
@@ -40,7 +43,13 @@ export class FolhaCamaraComponent implements OnInit {
         { objectKey: 'vantagensPessoais' }
       ],
       fields: [
-        { name: 'Nome', objectKey: 'nome', classNames: 'clickable' },
+        {
+          name: 'Nome',
+          objectKey: 'nome',
+          classNames: 'clickable',
+          expand: true,
+          render: (row: FolhaCamara) => `<a href="#">${row.nome}</a>`
+        },
         { name: 'Vínculo', objectKey: 'vinculo' },
         { name: 'Cargo', objectKey: 'cargo' },
         { name: 'Remuneração Fixa', objectKey: 'remuneracaoFixa' },
@@ -57,9 +66,9 @@ export class FolhaCamaraComponent implements OnInit {
   public search(event: Event): void {
     this.folhaCamaraService.search(this.filter).subscribe(
       (data: { total: number, result: Array<FolhaCamara> }) => {
-        this.configObject.data = data.result;
+        this.gtConfig.data = data.result;
         this.total = data.total;
-        this.configObject.info = {
+        this.gtConfig.info = {
           pageCurrent: this.filter.page,
           recordLength: this.filter.limit,
           recordsAll: data.total,
@@ -73,9 +82,13 @@ export class FolhaCamaraComponent implements OnInit {
   }
 
   public onTableEvent(event: Event): void {
-    if ('gt-page-changed-lazy' === event['name']) {
-      this.filter.page = event['value']['pageCurrent'];
-      this.search(new Event('click'));
+    switch (event['name']) {
+      case 'gt-page-changed-lazy':
+        this.filter.page = event['value']['pageCurrent'];
+        this.search(new Event('click'));
+        break;
+      case 'gt-sorting-applied':
+        /** @todo Implementar evento de ordenação (gt-sorting-applied) */
     }
   }
 }
