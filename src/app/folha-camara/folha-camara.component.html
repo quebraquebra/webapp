@@ -66,12 +66,12 @@
     [(gtData)]="gtConfig.data"
     [gtInfo]="gtConfig.info"
     (gtEvent)="onTableEvent($event)"
-    [gtOptions]="{ lazyLoad: true, cache: true }"
+    [gtOptions]="{ lazyLoad: true }"
     [gtTexts]="gtTexts"
     [gtRowComponent]="gtRowComponent">
   </generic-table>
 </div> <!--/.table-responsive-->
-<!--<small><gt-table-info [genericTable]="folhaCamaraTable"></gt-table-info></small>-->
+<small><gt-table-info [genericTable]="folhaCamaraTable"></gt-table-info></small>
 <div class="text-center">
   <gt-pagination gtClasses="justify-content-center" [genericTable]="folhaCamaraTable"></gt-pagination>
 </div> <!--/.text-center-->

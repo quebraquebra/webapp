@@ -9,6 +9,7 @@ import { Observable } from 'rxjs/Rx';
 export interface FolhaCamaraFilter {
   limit: number,
   page: number,
+  sort: string,
   order: string,
   ano: number,
   mes: number,
@@ -26,6 +27,7 @@ export class FolhaCamaraService {
     const params: URLSearchParams = new URLSearchParams();
     params.set('limit', filter.limit.toString());
     params.set('page', filter.page.toString());
+    params.set('sort', filter.sort.toString());
     params.set('order', filter.order.toString());
     params.set('ano', filter.ano.toString());
     params.set('mes', filter.mes.toString());

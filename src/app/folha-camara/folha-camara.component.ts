@@ -27,7 +27,8 @@ export class FolhaCamaraComponent {
     this.filter = {
       limit: 10,
       page: 1,
-      order: '',
+      sort: 'nome',
+      order: 'ASC',
       ano: date.getUTCFullYear(),
       mes: date.getUTCMonth() + 1,
       nome: '',
@@ -76,14 +77,17 @@ export class FolhaCamaraComponent {
     event.preventDefault();
   }
 
-  public onTableEvent(event: Event): void {
+  public onTableEvent(event: Object): void {
     switch (event['name']) {
       case 'gt-page-changed-lazy':
         this.filter.page = event['value']['pageCurrent'];
         this.search(new Event('click'));
         break;
       case 'gt-sorting-applied':
-        this.filter.order = event['value'][0];
+        const pattern: RegExp = new RegExp(/^-?([\w]+)$/);
+        this.filter.order = event['value'][0].startsWith('-') ? 'DESC' : 'ASC';
+        this.filter.sort = pattern.exec(event['value'][0])[1];
+        this.filter.page = 1;
         this.search(new Event('click'));
     }
   }
