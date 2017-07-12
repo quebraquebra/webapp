@@ -1,0 +1,14 @@
+tr td.clickable > span.gt-row-content {
+  cursor: pointer;
+  font-weight: bold;
+  color: #337ab7;
+  text-decoration: none;
+}
+tr td.clickable > span.gt-row-content::before {
+  content: "\F0DA";
+  font: normal normal normal 14px/1 FontAwesome;
+  display: inline-block;
+  width: 14px;
+  color: #000;
+}
+tr.row-open td.clickable > span.gt-row-content::before { content: "\F0D7" }

@@ -12,7 +12,7 @@ import { PerfilComponent } from './perfil';
   styleUrls: ['./folha-camara.component.scss'],
   entryComponents: [PerfilComponent]
 })
-export class FolhaCamaraComponent implements OnInit {
+export class FolhaCamaraComponent {
 
   public filter: FolhaCamaraFilter;
   public gtConfig: GtConfig<any>;
@@ -43,13 +43,7 @@ export class FolhaCamaraComponent implements OnInit {
         { objectKey: 'vantagensPessoais' }
       ],
       fields: [
-        {
-          name: 'Nome',
-          objectKey: 'nome',
-          classNames: 'clickable',
-          expand: true,
-          render: (row: FolhaCamara) => `<a href="#">${row.nome}</a>`
-        },
+        { name: 'Nome', objectKey: 'nome', classNames: 'clickable', expand: true },
         { name: 'Vínculo', objectKey: 'vinculo' },
         { name: 'Cargo', objectKey: 'cargo' },
         { name: 'Remuneração Fixa', objectKey: 'remuneracaoFixa' },
@@ -57,10 +51,6 @@ export class FolhaCamaraComponent implements OnInit {
       ],
       data: []
     }
-  }
-
-  public ngOnInit(): void {
-    this.search(new Event('click'));
   }
 
   public search(event: Event): void {
