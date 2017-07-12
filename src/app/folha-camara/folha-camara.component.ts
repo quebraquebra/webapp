@@ -1,8 +1,8 @@
-import { Component, OnInit, Type } from '@angular/core';
+import { Component, OnInit, Type, ViewChild } from '@angular/core';
 
 import { FolhaCamaraService, FolhaCamara, FolhaCamaraFilter } from '.';
 import { Modal } from 'angular2-modal/plugins/bootstrap';
-import { GtConfig, GtTexts } from '@angular-generic-table/core';
+import { GenericTableComponent, GtConfig, GtTexts } from '@angular-generic-table/core';
 import { gtTexts } from '../shared/util/angular-generic-table';
 import { PerfilComponent } from './perfil';
 
@@ -20,11 +20,14 @@ export class FolhaCamaraComponent {
   public gtTexts: GtTexts;
   public total: number;
 
+  @ViewChild('folhaCamaraTable') public folhaCamaraTable: GenericTableComponent<any, PerfilComponent>;
+
   public constructor(private modal: Modal, private folhaCamaraService: FolhaCamaraService) {
     const date: Date = new Date();
     this.filter = {
       limit: 10,
       page: 1,
+      order: '',
       ano: date.getUTCFullYear(),
       mes: date.getUTCMonth() + 1,
       nome: '',
@@ -54,6 +57,8 @@ export class FolhaCamaraComponent {
   }
 
   public search(event: Event): void {
+    this.folhaCamaraTable.loading = true;
+
     this.folhaCamaraService.search(this.filter).subscribe(
       (data: { total: number, result: Array<FolhaCamara> }) => {
         this.gtConfig.data = data.result;

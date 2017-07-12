@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import { Http, URLSearchParams } from '@angular/http';
 
 import { FolhaCamara, FolhaCamaraFactory } from '.';
-import { UrlService } from './../shared/service/url.service';
+import { UrlService } from '../shared/service/url.service';
 
 import { Observable } from 'rxjs/Rx';
 
 export interface FolhaCamaraFilter {
   limit: number,
   page: number,
+  order: string,
   ano: number,
   mes: number,
   nome: string,

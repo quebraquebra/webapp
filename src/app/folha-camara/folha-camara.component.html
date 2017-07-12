@@ -16,6 +16,11 @@
       <select id="ano" class="form-control" name="ano" [(ngModel)]="filter.ano">
         <option value="2017">2017</option>
         <option value="2016">2016</option>
+        <option value="2015">2015</option>
+        <option value="2014">2014</option>
+        <option value="2013">2013</option>
+        <option value="2012">2012</option>
+        <option value="2011">2011</option>
       </select>
     </div> <!--/.form-group-->
     <div class="form-group col-sm-4">
@@ -53,15 +58,20 @@
   </div> <!--/.row-->
 </form>
 
-<generic-table #folhaCamaraTable
-  gtClasses="table-bordered table-striped table-hover"
-  [gtSettings]="gtConfig.settings"
-  [gtFields]="gtConfig.fields"
-  [(gtData)]="gtConfig.data"
-  [gtInfo]="gtConfig.info"
-  (gtEvent)="onTableEvent($event)"
-  [gtOptions]="{ lazyLoad: true, cache: true }"
-  [gtTexts]="gtTexts"
-  [gtRowComponent]="gtRowComponent">
-</generic-table>
-<gt-pagination gtClasses="justify-content-center" [genericTable]="folhaCamaraTable"></gt-pagination>
+<div class="table-responsive">
+  <generic-table #folhaCamaraTable
+    gtClasses="table-bordered table-striped table-hover"
+    [gtSettings]="gtConfig.settings"
+    [gtFields]="gtConfig.fields"
+    [(gtData)]="gtConfig.data"
+    [gtInfo]="gtConfig.info"
+    (gtEvent)="onTableEvent($event)"
+    [gtOptions]="{ lazyLoad: true, cache: true }"
+    [gtTexts]="gtTexts"
+    [gtRowComponent]="gtRowComponent">
+  </generic-table>
+</div> <!--/.table-responsive-->
+<!--<small><gt-table-info [genericTable]="folhaCamaraTable"></gt-table-info></small>-->
+<div class="text-center">
+  <gt-pagination gtClasses="justify-content-center" [genericTable]="folhaCamaraTable"></gt-pagination>
+</div> <!--/.text-center-->
