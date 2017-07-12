@@ -83,7 +83,8 @@ export class FolhaCamaraComponent {
         this.search(new Event('click'));
         break;
       case 'gt-sorting-applied':
-        /** @todo Implementar evento de ordenação (gt-sorting-applied) */
+        this.filter.order = event['value'][0];
+        this.search(new Event('click'));
     }
   }
 }

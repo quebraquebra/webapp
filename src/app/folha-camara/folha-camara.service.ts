@@ -26,6 +26,7 @@ export class FolhaCamaraService {
     const params: URLSearchParams = new URLSearchParams();
     params.set('limit', filter.limit.toString());
     params.set('page', filter.page.toString());
+    params.set('order', filter.order.toString());
     params.set('ano', filter.ano.toString());
     params.set('mes', filter.mes.toString());
     params.set('nome', filter.nome);
