@@ -15,7 +15,7 @@ export class FolhaCamaraComponent {
   public gtConfig: GenericTableConfig;
   public gtRowComponent: Type<any> = PerfilComponent;
 
-  public constructor(private folhaCamaraService: FolhaCamaraService) {
+  public constructor(public folhaCamaraService: FolhaCamaraService) {
     const date: Date = new Date();
     this.filter = {
       limit: 10,
