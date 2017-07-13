@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { GenericTableModule } from '@angular-generic-table/core';
 import { FolhaCamaraComponent, FolhaCamaraService } from '.';
+import { GenericTableModule } from '../shared/generic-table';
 import { PerfilModule } from './perfil';
 
 @NgModule({

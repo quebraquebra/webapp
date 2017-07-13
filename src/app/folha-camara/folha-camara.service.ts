@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Http, URLSearchParams } from '@angular/http';
 
+import { Observable } from 'rxjs/Rx';
 import { FolhaCamara, FolhaCamaraFactory } from '.';
 import { UrlService } from '../shared/service/url.service';
+import { GenericTableService, GenericTableFilter } from '../shared/generic-table';
 
-import { Observable } from 'rxjs/Rx';
-
-export interface FolhaCamaraFilter {
+export interface FolhaCamaraFilter extends GenericTableFilter {
   limit: number,
   page: number,
   sort: string,
@@ -19,7 +19,7 @@ export interface FolhaCamaraFilter {
 }
 
 @Injectable()
-export class FolhaCamaraService {
+export class FolhaCamaraService implements GenericTableService {
 
   public constructor(private http: Http) { }
 

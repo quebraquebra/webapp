@@ -1,6 +1,6 @@
 <h1>Folha Câmara</h1>
 
-<form (ngSubmit)="filter.page = 1; search($event)" novalidate>
+<form (ngSubmit)="filter.page = 1; folhaCamaraTable.search($event)" novalidate>
   <div class="row">
     <div class="form-group col-sm-4">
       <label for="quantidade-registros" class="control-label">Quantidade de registros:</label>
@@ -58,20 +58,9 @@
   </div> <!--/.row-->
 </form>
 
-<div class="table-responsive">
-  <generic-table #folhaCamaraTable
-    gtClasses="table-bordered table-striped table-hover"
-    [gtSettings]="gtConfig.settings"
-    [gtFields]="gtConfig.fields"
-    [(gtData)]="gtConfig.data"
-    [gtInfo]="gtConfig.info"
-    (gtEvent)="onTableEvent($event)"
-    [gtOptions]="{ lazyLoad: true }"
-    [gtTexts]="gtTexts"
-    [gtRowComponent]="gtRowComponent">
-  </generic-table>
-</div> <!--/.table-responsive-->
-<small><gt-table-info [genericTable]="folhaCamaraTable"></gt-table-info></small>
-<div class="text-center">
-  <gt-pagination gtClasses="justify-content-center" [genericTable]="folhaCamaraTable"></gt-pagination>
-</div> <!--/.text-center-->
+<app-generic-table #folhaCamaraTable
+  [filter]="filter"
+  [gtConfig]="gtConfig"
+  [gtRowComponent]="gtRowComponent"
+  [service]="folhaCamaraService">
+</app-generic-table>

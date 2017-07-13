@@ -1,4 +1,6 @@
-export class FolhaCamara {
+import { GenericTableData } from '../shared/generic-table';
+
+export class FolhaCamara implements GenericTableData {
 
   public static fromJson(folhaJson: FolhaCamara): FolhaCamara {
     return new FolhaCamara(

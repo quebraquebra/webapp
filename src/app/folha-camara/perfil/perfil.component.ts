@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
-import { GtExpandedRow } from '@angular-generic-table/core';
 import { FolhaCamara } from '..';
+import { GenericTableExpandedRow } from '../../shared/generic-table';
 
 @Component({
   selector: 'app-perfil',
   templateUrl: './perfil.component.html',
   styleUrls: ['./perfil.component.scss']
 })
-export class PerfilComponent extends GtExpandedRow<any> implements OnInit {
+export class PerfilComponent extends GenericTableExpandedRow implements OnInit {
 
   public folhaCamara: FolhaCamara;
 

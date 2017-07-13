@@ -1,4 +1,4 @@
-import { GtTexts } from '@angular-generic-table/core';
+import { GtConfig, GtTexts, GtExpandedRow } from '@angular-generic-table/core';
 
 export const gtTexts: { [lang: string]: GtTexts } = {
   'pt-BR': {
@@ -17,3 +17,17 @@ export const gtTexts: { [lang: string]: GtTexts } = {
     inlineEditEdited: 'Edição em linha editada',
   }
 }
+
+export interface GenericTableConfig extends GtConfig<any> { }
+
+export interface GenericTableFilter {
+
+  limit: number,
+  page: number,
+  sort: string,
+  order: string
+}
+
+export interface GenericTableData { }
+
+export abstract class GenericTableExpandedRow extends GtExpandedRow<any> { }
