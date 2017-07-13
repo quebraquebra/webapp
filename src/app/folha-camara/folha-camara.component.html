@@ -5,39 +5,19 @@
     <div class="form-group col-sm-4">
       <label for="quantidade-registros" class="control-label">Quantidade de registros:</label>
       <select id="quantidade-registros" class="form-control" name="limit" [(ngModel)]="filter.limit">
-        <option value="10">10</option>
-        <option value="20">20</option>
-        <option value="30">30</option>
-        <option value="50">50</option>
+        <option *ngFor="let quantidade of quantidadesRegistros" [value]="quantidade">{{ quantidade }}</option>
       </select>
     </div> <!--/.form-group-->
     <div class="form-group col-sm-4">
       <label for="ano" class="control-label">Ano:</label>
       <select id="ano" class="form-control" name="ano" [(ngModel)]="filter.ano">
-        <option value="2017">2017</option>
-        <option value="2016">2016</option>
-        <option value="2015">2015</option>
-        <option value="2014">2014</option>
-        <option value="2013">2013</option>
-        <option value="2012">2012</option>
-        <option value="2011">2011</option>
+        <option *ngFor="let ano of anos" [value]="ano">{{ ano }}</option>
       </select>
     </div> <!--/.form-group-->
     <div class="form-group col-sm-4">
       <label for="mes" class="control-label">Mês:</label>
       <select id="mes" class="form-control" name="mes" [(ngModel)]="filter.mes">
-        <option value="12">Dezembro</option>
-        <option value="11">Novembro</option>
-        <option value="10">Outubro</option>
-        <option value="9">Setembro</option>
-        <option value="8">Agosto</option>
-        <option value="7">Julho</option>
-        <option value="6">Junho</option>
-        <option value="5">Maio</option>
-        <option value="4">Abril</option>
-        <option value="3">Março</option>
-        <option value="2">Fevereiro</option>
-        <option value="1">Janeiro</option>
+        <option *ngFor="let mes of object.keys(meses)" [value]="mes">{{ meses[mes] }}</option>
       </select>
     </div> <!--/.form-group-->
     <div class="form-group col-sm-4">
