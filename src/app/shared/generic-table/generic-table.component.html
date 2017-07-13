@@ -1,19 +1,21 @@
-<div class="table-responsive">
-  <generic-table #genericTable
-    gtClasses="table-bordered table-striped table-hover"
-    [gtSettings]="gtConfig.settings"
-    [gtFields]="gtConfig.fields"
-    [(gtData)]="gtConfig.data"
-    [gtInfo]="gtConfig.info"
-    (gtEvent)="onTableEvent($event)"
-    [gtOptions]="{ lazyLoad: true }"
-    [gtTexts]="gtTexts"
-    [gtRowComponent]="gtRowComponent">
-  </generic-table>
-</div> <!--/.table-responsive-->
+<section [hidden]="!initializedSearch">
+  <div class="table-responsive">
+    <generic-table #genericTable
+      gtClasses="table-bordered table-striped table-hover"
+      [gtSettings]="gtConfig.settings"
+      [gtFields]="gtConfig.fields"
+      [(gtData)]="gtConfig.data"
+      [gtInfo]="gtConfig.info"
+      (gtEvent)="onTableEvent($event)"
+      [gtOptions]="{ lazyLoad: true }"
+      [gtTexts]="gtTexts"
+      [gtRowComponent]="gtRowComponent">
+    </generic-table>
+  </div> <!--/.table-responsive-->
 
-<small><gt-table-info [genericTable]="genericTable"></gt-table-info></small>
+  <small><gt-table-info [genericTable]="genericTable"></gt-table-info></small>
 
-<div class="text-center">
-  <gt-pagination gtClasses="justify-content-center" [genericTable]="genericTable"></gt-pagination>
-</div> <!--/.text-center-->
+  <div class="text-center">
+    <gt-pagination gtClasses="justify-content-center" [genericTable]="genericTable"></gt-pagination>
+  </div> <!--/.text-center-->
+</section>

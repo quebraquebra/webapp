@@ -1,4 +1,4 @@
-import { Component, Type, Input, ViewChild } from '@angular/core';
+import { Component, Type, Input, ViewChild, OnInit } from '@angular/core';
 
 import { GenericTableComponent as GtComponent, GtConfig, GtTexts } from '@angular-generic-table/core';
 import { GenericTableExpandedRow, GenericTableService, GenericTableFilter, GenericTableConfig, GenericTableData, gtTexts } from '.';
@@ -7,9 +7,10 @@ import { GenericTableExpandedRow, GenericTableService, GenericTableFilter, Gener
   selector: 'app-generic-table',
   templateUrl: './generic-table.component.html'
 })
-export class GenericTableComponent<GtExpandedRow extends GenericTableExpandedRow> {
+export class GenericTableComponent<GtExpandedRow extends GenericTableExpandedRow> implements OnInit {
 
   public gtTexts: GtTexts;
+  public initializedSearch: boolean;
   public total: number;
 
   @Input() public filter: GenericTableFilter;
@@ -21,7 +22,12 @@ export class GenericTableComponent<GtExpandedRow extends GenericTableExpandedRow
 
   public constructor() {
     this.gtTexts = gtTexts['pt-BR'];
+    this.initializedSearch = false;
     this.total = 0;
+  }
+
+  public ngOnInit(): void {
+    this.genericTable.loading = false;
   }
 
   public search($event?: Event): void {
@@ -29,6 +35,7 @@ export class GenericTableComponent<GtExpandedRow extends GenericTableExpandedRow
 
     this.service.search(this.filter).subscribe(
       (data: { total: number, result: Array<GenericTableData> }) => {
+        this.initializedSearch = true;
         this.gtConfig.data = data.result;
         this.total = data.total;
         this.gtConfig.info = {
@@ -44,6 +51,10 @@ export class GenericTableComponent<GtExpandedRow extends GenericTableExpandedRow
     if ($event) {
       $event.preventDefault();
     }
+  }
+
+  public isLoading(): boolean {
+    return this.genericTable.loading;
   }
 
   public onTableEvent(event: { name: string, value: any }): void {
