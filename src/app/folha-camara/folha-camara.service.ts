@@ -7,10 +7,7 @@ import { UrlService } from '../shared/service/url.service';
 import { GenericTableService, GenericTableFilter } from '../shared/generic-table';
 
 export interface FolhaCamaraFilter extends GenericTableFilter {
-  limit: number,
-  page: number,
-  sort: string,
-  order: string,
+
   ano: number,
   mes: number,
   nome: string,
