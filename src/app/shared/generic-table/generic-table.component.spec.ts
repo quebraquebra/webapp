@@ -3,11 +3,12 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { GenericTableComponent } from './generic-table.component';
+import { GenericTableComponent } from '.';
+import { PerfilComponent } from '../../folha-camara/perfil';
 
 describe('GenericTableComponent', () => {
-  let component: GenericTableComponent;
-  let fixture: ComponentFixture<GenericTableComponent>;
+  let component: GenericTableComponent<PerfilComponent>;
+  let fixture: ComponentFixture<GenericTableComponent<PerfilComponent>>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
