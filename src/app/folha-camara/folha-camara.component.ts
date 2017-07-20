@@ -50,8 +50,8 @@ export class FolhaCamaraComponent {
         { name: 'Nome', objectKey: 'nome', classNames: 'clickable', expand: true },
         { name: 'Vínculo', objectKey: 'vinculo' },
         { name: 'Cargo', objectKey: 'cargo' },
-        { name: 'Remuneração Fixa', objectKey: 'remuneracaoFixa' },
-        { name: 'Vantagens Pessoais', objectKey: 'vantagensPessoais' }
+        { name: 'Remuneração Fixa', objectKey: 'remuneracaoFixa', classNames: 'text-right' },
+        { name: 'Vantagens Pessoais', objectKey: 'vantagensPessoais', classNames: 'text-right' }
       ],
       data: []
     }
