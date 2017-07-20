@@ -1,0 +1,48 @@
+<h1>Folha Senado</h1>
+
+<form (ngSubmit)="filter.page = 1; folhaSenadoTable.search($event)" novalidate>
+  <div class="row">
+    <div class="form-group col-sm-4">
+      <label for="quantidade-registros" class="control-label">Quantidade de registros:</label>
+      <select id="quantidade-registros" class="form-control" name="limit" [(ngModel)]="filter.limit">
+        <option *ngFor="let quantidade of quantidadesRegistros" [value]="quantidade">{{ quantidade }}</option>
+      </select>
+    </div> <!--/.form-group-->
+    <div class="form-group col-sm-4">
+      <label for="ano" class="control-label">Ano:</label>
+      <select id="ano" class="form-control" name="ano" [(ngModel)]="filter.ano">
+        <option *ngFor="let ano of anos" [value]="ano">{{ ano }}</option>
+      </select>
+    </div> <!--/.form-group-->
+    <div class="form-group col-sm-4">
+      <label for="mes" class="control-label">Mês:</label>
+      <select id="mes" class="form-control" name="mes" [(ngModel)]="filter.mes">
+        <option *ngFor="let mes of object.keys(meses)" [value]="mes">{{ meses[mes] }}</option>
+      </select>
+    </div> <!--/.form-group-->
+    <div class="form-group col-sm-4">
+      <label for="servidor" class="control-label">Servidor:</label>
+      <input id="servidor" class="form-control" name="servidor" [(ngModel)]="filter.servidor" />
+    </div> <!--/.form-group-->
+    <div class="form-group col-sm-4">
+      <label for="vinculo" class="control-label">Vínculo:</label>
+      <input id="vinculo" class="form-control" name="vinculo" [(ngModel)]="filter.vinculo" />
+    </div> <!--/.form-group-->
+    <div class="form-group col-sm-4">
+      <label for="cargo" class="control-label">Cargo:</label>
+      <input id="cargo" class="form-control" name="cargo" [(ngModel)]="filter.cargo" />
+    </div> <!--/.form-group-->
+    <div class="form-group col-sm-4">
+      <input type="submit" class="btn btn-success btn-search"
+             [value]="!folhaSenadoTable.isLoading() ? 'Pesquisar' : 'Carregando...'"
+             [disabled]="folhaSenadoTable.isLoading()" />
+    </div>
+  </div> <!--/.row-->
+</form>
+
+<app-generic-table #folhaSenadoTable
+  [filter]="filter"
+  [gtConfig]="gtConfig"
+  [gtRowComponent]="gtRowComponent"
+  [service]="folhaSenadoService">
+</app-generic-table>
