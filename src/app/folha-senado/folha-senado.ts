@@ -67,7 +67,7 @@ export class FolhaSenado implements GenericTableData {
   ) { }
 
   public get remuneracaoAposDescontosObrigatorios(): number {
-    return this.remuneracaoBasica + this.vantagensPessoais + this.vantagensEventuais + this.abonoPermanencia + this.descontosObrigatorios;
+    return this.remuneracaoBasica + this.vantagensPessoais + this.vantagensEventuais + this.abonoPermanencia - this.descontosObrigatorios;
   }
 
   public get vantagensEventuais(): number {
