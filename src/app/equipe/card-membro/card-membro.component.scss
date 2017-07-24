@@ -1,0 +1,29 @@
+.card {
+  background-color: #fff;
+  border: 1px solid #393;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  padding: 5px;
+  transition-duration: 1s;
+
+  &:hover {
+    border: 1px solid #272;
+    cursor: pointer;
+  }
+
+  .image img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .nome,
+  .papel {
+    font-size: .7em;
+    text-align: center;
+  }
+
+  .nome {
+    font-weight: bold;
+    margin-top: 5px;
+  }
+}
