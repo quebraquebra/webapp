@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { environment } from './../../../environments/environment';
+import { environment } from '../../../environments/environment';
 
 const apiUrlProd = 'http://api.quebraquebra.lsd.ufcg.edu.br';
 const apiUrlDev = 'http://api.quebraquebra.dev';
