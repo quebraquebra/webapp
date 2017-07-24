@@ -1,4 +1,5 @@
 import { Component, Type } from '@angular/core';
+import { DecimalPipe } from '@angular/common';
 
 import { FolhaSenadoService, FolhaSenado, FolhaSenadoFilter } from '.';
 import { PerfilComponent } from './perfil';
@@ -8,6 +9,7 @@ import { quantidadesRegistros, anos, meses } from '../shared/util/filter';
 @Component({
   selector: 'app-folha-senado',
   templateUrl: './folha-senado.component.html',
+  providers: [DecimalPipe],
   entryComponents: [PerfilComponent]
 })
 export class FolhaSenadoComponent {
@@ -20,7 +22,7 @@ export class FolhaSenadoComponent {
   public gtRowComponent: Type<any> = PerfilComponent;
   public object = Object;
 
-  public constructor(public folhaSenadoService: FolhaSenadoService) {
+  public constructor(public folhaSenadoService: FolhaSenadoService, private decimalPipe: DecimalPipe) {
     this.anos = anos;
     this.meses = meses;
     this.quantidadesRegistros = quantidadesRegistros;
@@ -31,8 +33,8 @@ export class FolhaSenadoComponent {
       page: 1,
       sort: 'servidor',
       order: 'ASC',
-      ano: date.getUTCFullYear(),
-      mes: date.getUTCMonth() + 1,
+      ano: '',
+      mes: '',
       servidor: '',
       vinculo: '',
       cargo: ''
@@ -41,6 +43,8 @@ export class FolhaSenadoComponent {
     this.gtConfig = {
       settings: [
         { objectKey: 'servidor' },
+        { objectKey: 'ano' },
+        { objectKey: 'mes' },
         { objectKey: 'vinculo' },
         { objectKey: 'cargo' },
         { objectKey: 'tipo' },
@@ -49,11 +53,23 @@ export class FolhaSenadoComponent {
       ],
       fields: [
         { name: 'Servidor', objectKey: 'servidor', classNames: 'clickable', expand: true },
+        { name: 'Ano', objectKey: 'ano' },
+        { name: 'Mês', objectKey: 'mes' },
         { name: 'Vínculo', objectKey: 'vinculo' },
         { name: 'Cargo', objectKey: 'cargo' },
         { name: 'Tipo de Folha', objectKey: 'tipo' },
-        { name: 'Remuneração Básica', objectKey: 'remuneracaoBasica', classNames: 'text-right' },
-        { name: 'Vantagens Pessoais', objectKey: 'vantagensPessoais', classNames: 'text-right' }
+        {
+          name: 'Remuneração Básica',
+          objectKey: 'remuneracaoBasica',
+          classNames: 'text-right',
+          render: (row: FolhaSenado) => this.decimalPipe.transform(row.remuneracaoBasica, '1.2-2')
+        },
+        {
+          name: 'Vantagens Pessoais',
+          objectKey: 'vantagensPessoais',
+          classNames: 'text-right',
+          render: (row: FolhaSenado) => this.decimalPipe.transform(row.vantagensPessoais, '1.2-2')
+        }
       ],
       data: []
     }

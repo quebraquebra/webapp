@@ -8,8 +8,8 @@ import { GenericTableService, GenericTableFilter } from '../shared/generic-table
 
 export interface FolhaSenadoFilter extends GenericTableFilter {
 
-  ano: number,
-  mes: number,
+  ano: string,
+  mes: string,
   servidor: string,
   vinculo: string,
   cargo: string

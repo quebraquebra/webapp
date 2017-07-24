@@ -11,12 +11,14 @@
     <div class="form-group col-sm-4">
       <label for="ano" class="control-label">Ano:</label>
       <select id="ano" class="form-control" name="ano" [(ngModel)]="filter.ano">
+        <option value=""></option>
         <option *ngFor="let ano of anos" [value]="ano">{{ ano }}</option>
       </select>
     </div> <!--/.form-group-->
     <div class="form-group col-sm-4">
       <label for="mes" class="control-label">Mês:</label>
       <select id="mes" class="form-control" name="mes" [(ngModel)]="filter.mes">
+        <option value=""></option>
         <option *ngFor="let mes of object.keys(meses)" [value]="mes">{{ meses[mes] }}</option>
       </select>
     </div> <!--/.form-group-->
