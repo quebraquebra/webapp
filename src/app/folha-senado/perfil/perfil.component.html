@@ -15,7 +15,7 @@
     </thead>
     <tbody>
       <tr>
-        <td>{{ folhaSenado.mes + '/' + folhaSenado.ano }}</td>
+        <td>{{ folhaSenado.mes | number:'2.0-0' }}/{{ folhaSenado.ano }}</td>
         <td>{{ folhaSenado.vinculo }}</td>
         <td>{{ folhaSenado.cargo }}</td>
         <td>{{ folhaSenado.situacao }}</td>
@@ -38,72 +38,72 @@
     <tbody>
       <tr>
         <td class="text-bold">Estrutura Remuneratória Básica</td>
-        <td class="text-right">{{ folhaSenado.remuneracaoBasica | number:'.2-2' }}</td>
+        <td class="text-right">{{ folhaSenado.remuneracaoBasica | number:'1.2-2' }}</td>
       </tr>
       <tr>
         <td class="text-bold">Vantagens Pessoais</td>
-        <td class="text-right">{{ folhaSenado.vantagensPessoais | number:'.2-2' }}</td>
+        <td class="text-right">{{ folhaSenado.vantagensPessoais | number:'1.2-2' }}</td>
       </tr>
       <tr>
         <td class="text-bold" colspan="2">Vantagens Eventuais</td>
       </tr>
       <tr>
         <td>Função Comissionada</td>
-        <td class="text-right">{{ folhaSenado.funcaoCargoComissao | number:'.2-2' }}</td>
+        <td class="text-right">{{ folhaSenado.funcaoCargoComissao | number:'1.2-2' }}</td>
       </tr>
       <tr>
         <td>Antecipação e Gratificação Natalina</td>
-        <td class="text-right">{{ folhaSenado.gratificacaoNatalina | number:'.2-2' }}</td>
+        <td class="text-right">{{ folhaSenado.gratificacaoNatalina | number:'1.2-2' }}</td>
       </tr>
       <tr>
         <td>Horas Extras</td>
-        <td class="text-right">{{ folhaSenado.horasExtras | number:'.2-2' }}</td>
+        <td class="text-right">{{ folhaSenado.horasExtras | number:'1.2-2' }}</td>
       </tr>
       <tr>
         <td>Outras Remunerações Eventuais/Provisórias</td>
-        <td class="text-right">{{ folhaSenado.outrasRemuneracoesEventuais | number:'.2-2' }}</td>
+        <td class="text-right">{{ folhaSenado.outrasRemuneracoesEventuais | number:'1.2-2' }}</td>
       </tr>
       <tr>
         <td class="text-bold">Abono Permanência</td>
-        <td class="text-right">{{ folhaSenado.abonoPermanencia | number:'.2-2' }}</td>
+        <td class="text-right">{{ folhaSenado.abonoPermanencia | number:'1.2-2' }}</td>
       </tr>
       <tr>
         <td class="text-bold" colspan="2">Descontos Obrigatórios</td>
       </tr>
       <tr>
         <td>Reversão do Teto Constitucional</td>
-        <td class="text-right">{{ folhaSenado.reversaoTetoConstitucional | number:'.2-2' }}</td>
+        <td class="text-right">{{ folhaSenado.reversaoTetoConstitucional | number:'1.2-2' }}</td>
       </tr>
       <tr>
         <td>Imposto de Renda</td>
-        <td class="text-right">{{ folhaSenado.impostoRenda | number:'.2-2' }}</td>
+        <td class="text-right">{{ folhaSenado.impostoRenda | number:'1.2-2' }}</td>
       </tr>
       <tr>
         <td>PSSS</td>
-        <td class="text-right">{{ folhaSenado.psss | number:'.2-2' }}</td>
+        <td class="text-right">{{ folhaSenado.psss | number:'1.2-2' }}</td>
       </tr>
       <tr>
         <td>Faltas</td>
-        <td class="text-right">{{ folhaSenado.faltas | number:'.2-2' }}</td>
+        <td class="text-right">{{ folhaSenado.faltas | number:'1.2-2' }}</td>
       </tr>
       <tr>
         <td class="text-bold">Remuneração após Descontos Obrigatórios</td>
-        <td class="text-right">{{ folhaSenado.remuneracaoAposDescontosObrigatorios | number:'.2-2' }}</td>
+        <td class="text-right">{{ folhaSenado.remuneracaoAposDescontosObrigatorios | number:'1.2-2' }}</td>
       </tr>
       <tr>
         <td class="text-bold" colspan="2">Vantagens Indenizatórias e Compensatórias</td>
       </tr>
       <tr>
         <td>Diárias</td>
-        <td class="text-right">{{ folhaSenado.diarias | number:'.2-2' }}</td>
+        <td class="text-right">{{ folhaSenado.diarias | number:'1.2-2' }}</td>
       </tr>
       <tr>
         <td>Auxílios</td>
-        <td class="text-right">{{ folhaSenado.auxilioAlimentacao | number:'.2-2' }}</td>
+        <td class="text-right">{{ folhaSenado.auxilioAlimentacao | number:'1.2-2' }}</td>
       </tr>
       <tr>
         <td>Outras Vantagens Indenizatórias</td>
-        <td class="text-right">{{ folhaSenado.outrasVantagensIndenizatorias | number:'.2-2' }}</td>
+        <td class="text-right">{{ folhaSenado.outrasVantagensIndenizatorias | number:'1.2-2' }}</td>
       </tr>
     </tbody>
   </table>

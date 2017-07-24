@@ -11,7 +11,7 @@
     </thead>
     <tbody>
       <tr>
-        <td>{{ folhaCamara.mes + '/' + folhaCamara.ano }}</td>
+        <td>{{ folhaCamara.mes | number:'2.0-0' }}/{{ folhaCamara.ano }}</td>
         <td>{{ folhaCamara.vinculo }}</td>
         <td>{{ folhaCamara.cargo }}</td>
       </tr>
@@ -30,47 +30,47 @@
     <tbody>
       <tr>
         <td class="text-bold">1 - Remuneração Básica</td>
-        <td class="text-right">{{ folhaCamara.remuneracaoFixa + folhaCamara.vantagensPessoais | number:'.2-2' }}</td>
+        <td class="text-right">{{ folhaCamara.remuneracaoFixa + folhaCamara.vantagensPessoais | number:'1.2-2' }}</td>
       </tr>
       <tr>
         <td>a - Remuneração Fixa</td>
-        <td class="text-right">{{ folhaCamara.remuneracaoFixa | number:'.2-2' }}</td>
+        <td class="text-right">{{ folhaCamara.remuneracaoFixa | number:'1.2-2' }}</td>
       </tr>
       <tr>
         <td>b - Vantagens de Natureza Pessoal</td>
-        <td class="text-right">{{ folhaCamara.vantagensPessoais | number:'.2-2' }}</td>
+        <td class="text-right">{{ folhaCamara.vantagensPessoais | number:'1.2-2' }}</td>
       </tr>
       <tr>
         <td class="text-bold">2 - Remuneração Eventual Provisória</td>
-        <td class="text-right">{{ folhaCamara.remuneracaoEventual | number:'.2-2' }}</td>
+        <td class="text-right">{{ folhaCamara.remuneracaoEventual | number:'1.2-2' }}</td>
       </tr>
       <tr>
         <td class="text-bold">3 - Abono Permanência</td>
-        <td class="text-right">{{ folhaCamara.abonoPermanencia | number:'.2-2' }}</td>
+        <td class="text-right">{{ folhaCamara.abonoPermanencia | number:'1.2-2' }}</td>
       </tr>
       <tr>
         <td class="text-bold">4 - Descontos Obrigatórios</td>
-        <td class="text-right">{{ folhaCamara.descontos | number:'.2-2' }}</td>
+        <td class="text-right">{{ folhaCamara.descontos | number:'1.2-2' }}</td>
       </tr>
       <tr>
         <td class="text-bold">5 - Remuneração após Descontos Obrigatórios</td>
-        <td class="text-right">{{ folhaCamara.remuneracaoFixa + folhaCamara.vantagensPessoais + folhaCamara.remuneracaoEventual + folhaCamara.abonoPermanencia - folhaCamara.descontos | number:'.2-2' }}</td>
+        <td class="text-right">{{ folhaCamara.remuneracaoFixa + folhaCamara.vantagensPessoais + folhaCamara.remuneracaoEventual + folhaCamara.abonoPermanencia - folhaCamara.descontos | number:'1.2-2' }}</td>
       </tr>
       <tr>
         <td class="text-bold">6 - Outros</td>
-        <td class="text-right">{{ folhaCamara.outrosDiarias + folhaCamara.outrosAuxilios + folhaCamara.outrosVantagens | number:'.2-2' }}</td>
+        <td class="text-right">{{ folhaCamara.outrosDiarias + folhaCamara.outrosAuxilios + folhaCamara.outrosVantagens | number:'1.2-2' }}</td>
       </tr>
       <tr>
         <td>a - Diárias</td>
-        <td class="text-right">{{ folhaCamara.outrosDiarias | number:'.2-2' }}</td>
+        <td class="text-right">{{ folhaCamara.outrosDiarias | number:'1.2-2' }}</td>
       </tr>
       <tr>
         <td>b - Auxílios</td>
-        <td class="text-right">{{ folhaCamara.outrosAuxilios | number:'.2-2' }}</td>
+        <td class="text-right">{{ folhaCamara.outrosAuxilios | number:'1.2-2' }}</td>
       </tr>
       <tr>
         <td>c - Vantagens Indenizatórias</td>
-        <td class="text-right">{{ folhaCamara.outrosVantagens | number:'.2-2' }}</td>
+        <td class="text-right">{{ folhaCamara.outrosVantagens | number:'1.2-2' }}</td>
       </tr>
     </tbody>
   </table>

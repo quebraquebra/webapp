@@ -53,7 +53,11 @@ export class FolhaCamaraComponent {
       fields: [
         { name: 'Nome', objectKey: 'nome', classNames: 'clickable', expand: true },
         { name: 'Ano', objectKey: 'ano' },
-        { name: 'Mês', objectKey: 'mes' },
+        {
+          name: 'Mês',
+          objectKey: 'mes',
+          render: (row: FolhaCamara) => this.decimalPipe.transform(row.mes, '2.0-0')
+        },
         { name: 'Vínculo', objectKey: 'vinculo' },
         { name: 'Cargo', objectKey: 'cargo' },
         {

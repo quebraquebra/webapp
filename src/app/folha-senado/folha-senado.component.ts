@@ -54,7 +54,11 @@ export class FolhaSenadoComponent {
       fields: [
         { name: 'Servidor', objectKey: 'servidor', classNames: 'clickable', expand: true },
         { name: 'Ano', objectKey: 'ano' },
-        { name: 'Mês', objectKey: 'mes' },
+        {
+          name: 'Mês',
+          objectKey: 'mes',
+          render: (row: FolhaSenado) => this.decimalPipe.transform(row.mes, '2.0-0')
+        },
         { name: 'Vínculo', objectKey: 'vinculo' },
         { name: 'Cargo', objectKey: 'cargo' },
         { name: 'Tipo de Folha', objectKey: 'tipo' },
