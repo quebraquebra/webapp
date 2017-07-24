@@ -1,5 +1,5 @@
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app.routing.module';
@@ -15,6 +15,9 @@ import { PageNotFoundModule } from './page-not-found';
     PageNotFoundModule
   ],
   declarations: [AppComponent],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'pt-BR' }
+  ]
 })
 export class AppModule { }
