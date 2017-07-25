@@ -8,11 +8,9 @@ import { Component, Input } from '@angular/core';
 export class CardMembroComponent {
 
   @Input() foto: string;
+  @Input() funcao: string;
   @Input() nome: string;
-  @Input() offset: number;
-  @Input() papel: string;
-
-  public constructor() {
-    this.offset = 0;
-  }
+  @Input() lattesLink: string;
+  @Input() linkedinLink: string;
+  @Input() websiteLink: string;
 }
