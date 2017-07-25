@@ -1,6 +1,8 @@
 <div class="row membro">
   <div class="col-lg-2 col-md-3 col-sm-3">
-    <img class="foto" [src]="'assets/img/membros/' + foto" [alt]="nome" [title]="nome" />
+    <div class="foto">
+      <img [src]="'assets/img/membros/' + foto" [alt]="nome" [title]="nome" />
+    </div> <!--/.foto-->
     <div class="links">
       <a *ngIf="websiteLink" [href]="websiteLink" target="_blank" [title]="'Website de ' + nome">
         <img src="./assets/img/icones/website.png" alt="Website" />
@@ -11,7 +13,7 @@
       <a *ngIf="lattesLink" [href]="lattesLink" target="_blank" [title]="'Currículo Lattes de ' + nome">
         <img src="./assets/img/icones/lattes.png" alt="Currículo Lattes" />
       </a>
-    </div>
+    </div> <!--/.links-->
   </div> <!--/.col-->
   <div class="col-lg-10 col-md-9 col-sm-9">
     <h3 class="nome">{{ nome }}</h3>
