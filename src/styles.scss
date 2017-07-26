@@ -27,6 +27,25 @@ h1 { margin-bottom: 30px }
 img { max-width: 100% }
 
 /**
+ * Botões
+ */
+
+.btn-primary {
+  background-color: #3a3f57;
+  border-color: #3a3f57;
+
+  &:focus {
+    background-color: #3a3f57;
+    border-color: #3a3f57;
+  }
+
+  &:hover {
+    background-color: #303e52;
+    border-color: #303e52;
+  }
+}
+
+/**
  * Home
  */
 
@@ -249,16 +268,9 @@ img { max-width: 100% }
       height: calc(100vh - 110px);
       padding: 20px;
 
-      table { background-color: #fff }
+      .btn-bar { margin-bottom: 15px }
 
-      .btn-search {
-        background-color: #3a3f57;
-        border-color: #3a3f57;
-      }
-      .btn-search:hover {
-        background-color: #303e52;
-        border-color: #303e52;
-      }
+      table { background-color: #fff }
     }
   }
 }

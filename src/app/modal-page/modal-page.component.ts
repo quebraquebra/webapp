@@ -8,8 +8,7 @@ import { SobreComponent } from '../sobre/sobre.component';
 
 @Component({
   selector: 'app-modal-page',
-  templateUrl: './modal-page.component.html',
-  styleUrls: ['./modal-page.component.scss']
+  templateUrl: './modal-page.component.html'
 })
 export class ModalPageComponent implements AfterViewInit, AfterViewChecked {
 

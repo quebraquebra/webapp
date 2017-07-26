@@ -1,4 +1,4 @@
-import { GenericTableData } from '../shared/generic-table';
+import { GenericTableData } from '../../shared/generic-table';
 
 export class FolhaSenado implements GenericTableData {
 

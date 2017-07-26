@@ -2,25 +2,25 @@ import { Injectable } from '@angular/core';
 import { Http, URLSearchParams } from '@angular/http';
 
 import { Observable } from 'rxjs/Rx';
-import { FolhaCamara, FolhaCamaraFactory } from '.';
-import { UrlService } from '../shared/service/url.service';
-import { GenericTableService, GenericTableFilter } from '../shared/generic-table';
+import { FolhaSenado, FolhaSenadoFactory } from '.';
+import { UrlService } from '../../shared/service/url.service';
+import { GenericTableService, GenericTableFilter } from '../../shared/generic-table';
 
-export interface FolhaCamaraFilter extends GenericTableFilter {
+export interface FolhaSenadoFilter extends GenericTableFilter {
 
   ano: string,
   mes: string,
-  nome: string,
+  servidor: string,
   vinculo: string,
   cargo: string
 }
 
 @Injectable()
-export class FolhaCamaraService implements GenericTableService {
+export class FolhaSenadoService implements GenericTableService {
 
   public constructor(private http: Http) { }
 
-  public search(filter: FolhaCamaraFilter): Observable<{ total: number, result: Array<FolhaCamara> }> {
+  public search(filter: FolhaSenadoFilter): Observable<{ total: number, result: Array<FolhaSenado> }> {
     const params: URLSearchParams = new URLSearchParams();
     params.set('limit', filter.limit.toString());
     params.set('page', filter.page.toString());
@@ -28,15 +28,15 @@ export class FolhaCamaraService implements GenericTableService {
     params.set('order', filter.order.toString());
     params.set('ano', filter.ano.toString());
     params.set('mes', filter.mes.toString());
-    params.set('nome', filter.nome);
+    params.set('servidor', filter.servidor);
     params.set('vinculo', filter.vinculo);
     params.set('cargo', filter.cargo);
 
-    return this.http.get(UrlService.mountApiUrl('camara/folha'), { search: params })
+    return this.http.get(UrlService.mountApiUrl('senado/folha'), { search: params })
       .map<any, any>((response: Response) => {
         return {
           total: response.json()['total'],
-          result: FolhaCamaraFactory.createFolhaList(response.json()['result'])
+          result: FolhaSenadoFactory.createFolhaList(response.json()['result'])
         }
       });
   }

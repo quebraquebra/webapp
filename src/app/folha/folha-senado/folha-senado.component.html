@@ -1,5 +1,3 @@
-<h1>Folha Senado</h1>
-
 <form (ngSubmit)="filter.page = 1; folhaSenadoTable.search($event)" novalidate>
   <div class="row">
     <div class="form-group col-sm-4">
@@ -35,7 +33,7 @@
       <input id="cargo" class="form-control" name="cargo" [(ngModel)]="filter.cargo" />
     </div> <!--/.form-group-->
     <div class="form-group col-sm-4">
-      <input type="submit" class="btn btn-success btn-search"
+      <input type="submit" class="btn btn-primary btn-search"
              [value]="!folhaSenadoTable.isLoading() ? 'Pesquisar' : 'Carregando...'"
              [disabled]="folhaSenadoTable.isLoading()" />
     </div>

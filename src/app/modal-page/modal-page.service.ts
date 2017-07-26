@@ -2,8 +2,7 @@ import { Injectable, Type } from '@angular/core';
 
 import { ModalPage } from '.';
 import { EquipeComponent } from '../equipe';
-import { FolhaCamaraComponent } from '../folha-camara';
-import { FolhaSenadoComponent } from '../folha-senado';
+import { FolhaComponent } from '../folha';
 import { SobreComponent } from '../sobre';
 
 @Injectable()
@@ -15,8 +14,7 @@ export class ModalPageService {
   public constructor() {
     this._components = [];
     this._components[ModalPage.EQUIPE] = EquipeComponent;
-    this._components[ModalPage.FOLHA_CAMARA] = FolhaCamaraComponent;
-    this._components[ModalPage.FOLHA_SENADO] = FolhaSenadoComponent;
+    this._components[ModalPage.FOLHA] = FolhaComponent;
     this._components[ModalPage.SOBRE] = SobreComponent;
   }
 

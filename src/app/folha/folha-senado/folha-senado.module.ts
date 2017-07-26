@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { FolhaCamaraComponent, FolhaCamaraService } from '.';
-import { GenericTableModule } from '../shared/generic-table';
+import { FolhaSenadoComponent, FolhaSenadoService } from '.';
+import { GenericTableModule } from '../../shared/generic-table';
 import { PerfilModule } from './perfil';
 
 @NgModule({
@@ -15,8 +15,8 @@ import { PerfilModule } from './perfil';
     GenericTableModule,
     PerfilModule
   ],
-  declarations: [FolhaCamaraComponent],
-  exports: [FolhaCamaraComponent],
-  providers: [FolhaCamaraService]
+  declarations: [FolhaSenadoComponent],
+  exports: [FolhaSenadoComponent],
+  providers: [FolhaSenadoService]
 })
-export class FolhaCamaraModule { }
+export class FolhaSenadoModule { }

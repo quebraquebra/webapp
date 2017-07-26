@@ -5,8 +5,7 @@ import { ModalPageComponent, ModalPageDirective } from '.';
 import { ModalModule } from 'angular2-modal';
 import { BootstrapModalModule } from 'angular2-modal/plugins/bootstrap';
 import { EquipeModule, EquipeComponent } from '../equipe';
-import { FolhaCamaraModule, FolhaCamaraComponent } from '../folha-camara';
-import { FolhaSenadoModule, FolhaSenadoComponent } from '../folha-senado';
+import { FolhaModule, FolhaComponent } from '../folha';
 import { SobreModule, SobreComponent } from '../sobre';
 
 @NgModule({
@@ -15,8 +14,7 @@ import { SobreModule, SobreComponent } from '../sobre';
     ModalModule.forRoot(),
     BootstrapModalModule,
     EquipeModule,
-    FolhaCamaraModule,
-    FolhaSenadoModule,
+    FolhaModule,
     SobreModule
   ],
   declarations: [
@@ -26,8 +24,7 @@ import { SobreModule, SobreComponent } from '../sobre';
   exports: [ModalPageComponent],
   entryComponents: [
     EquipeComponent,
-    FolhaCamaraComponent,
-    FolhaSenadoComponent,
+    FolhaComponent,
     SobreComponent
   ]
 })
