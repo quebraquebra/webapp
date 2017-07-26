@@ -1,9 +1,9 @@
 <h1>Folhas de Pagamento</h1>
 
 <div class="btn-bar">
-  <button class="btn btn-primary" (click)="folhaSelecionada = folha.CAMARA">Câmara dos Deputados</button>
-  <button class="btn btn-primary" (click)="folhaSelecionada = folha.SENADO">Senado Federal</button>
+  <button class="btn btn-primary" (click)="folhaSelecionada = folha['CAMARA']">Câmara dos Deputados</button>
+  <button class="btn btn-primary" (click)="folhaSelecionada = folha['SENADO']">Senado Federal</button>
 </div>
 
-<app-folha-camara [hidden]="folha.CAMARA !== folhaSelecionada"></app-folha-camara>
-<app-folha-senado [hidden]="folha.SENADO !== folhaSelecionada"></app-folha-senado>
+<app-folha-camara [hidden]="folha['CAMARA'] !== folhaSelecionada"></app-folha-camara>
+<app-folha-senado [hidden]="folha['SENADO'] !== folhaSelecionada"></app-folha-senado>
