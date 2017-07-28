@@ -31,18 +31,18 @@ export class FolhaCamaraComponent {
     this.filter = {
       limit: 10,
       page: 1,
-      sort: 'nome',
+      sort: 'servidor',
       order: 'ASC',
       ano: '',
       mes: '',
-      nome: '',
+      servidor: '',
       vinculo: '',
       cargo: ''
     }
 
     this.gtConfig = {
       settings: [
-        { objectKey: 'nome' },
+        { objectKey: 'servidor' },
         { objectKey: 'ano' },
         { objectKey: 'mes' },
         { objectKey: 'vinculo' },
@@ -51,7 +51,7 @@ export class FolhaCamaraComponent {
         { objectKey: 'vantagensPessoais' }
       ],
       fields: [
-        { name: 'Nome', objectKey: 'nome', classNames: 'clickable', expand: true },
+        { name: 'Servidor', objectKey: 'servidor', classNames: 'clickable', expand: true },
         { name: 'Ano', objectKey: 'ano' },
         {
           name: 'Mês',

@@ -10,7 +10,7 @@ export interface FolhaCamaraFilter extends GenericTableFilter {
 
   ano: string,
   mes: string,
-  nome: string,
+  servidor: string,
   vinculo: string,
   cargo: string
 }
@@ -28,7 +28,7 @@ export class FolhaCamaraService implements GenericTableService {
     params.set('order', filter.order.toString());
     params.set('ano', filter.ano.toString());
     params.set('mes', filter.mes.toString());
-    params.set('nome', filter.nome);
+    params.set('servidor', filter.servidor);
     params.set('vinculo', filter.vinculo);
     params.set('cargo', filter.cargo);
 

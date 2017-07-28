@@ -9,7 +9,7 @@ export class FolhaCamara implements GenericTableData {
       folhaJson.ano,
       folhaJson.cargo,
       folhaJson.vinculo,
-      folhaJson.nome,
+      folhaJson.servidor,
       folhaJson.remuneracaoFixa,
       folhaJson.vantagensPessoais,
       folhaJson.remuneracaoEventual,
@@ -27,7 +27,7 @@ export class FolhaCamara implements GenericTableData {
     private _ano: number,
     private _cargo: string,
     private _vinculo: string,
-    private _nome: string,
+    private _servidor: string,
     private _remuneracaoFixa: number,
     private _vantagensPessoais: number,
     private _remuneracaoEventual: number,
@@ -58,8 +58,8 @@ export class FolhaCamara implements GenericTableData {
     return this._vinculo;
   }
 
-  public get nome(): string {
-    return this._nome;
+  public get servidor(): string {
+    return this._servidor;
   }
 
   public get remuneracaoFixa(): number {
