@@ -32,16 +32,29 @@ img { max-width: 100% }
 
 .btn-primary {
   background-color: #3a3f57;
-  border-color: #3a3f57;
+  border: none;
 
   &:focus {
     background-color: #3a3f57;
-    border-color: #3a3f57;
+    box-shadow: 0 0 1px #3a3f57;
   }
 
   &:hover {
     background-color: #303e52;
-    border-color: #303e52;
+  }
+}
+
+.btn-inactive {
+  background-color: #777;
+  border: none;
+
+  &:focus {
+    background-color: #777;
+    box-shadow: 0 0 1px #777;
+  }
+
+  &:hover {
+    background-color: #6a6a6a;
   }
 }
 
