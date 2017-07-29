@@ -71,6 +71,23 @@ img { max-width: 100% }
       opacity: 0.75;
       position: absolute;
       transition-duration: .2s;
+      width: 110px;
+
+      @media screen and (min-width: 600px) {
+        width: 130px;
+
+        @media screen and (orientation: landscape) {
+          width: 110px;
+        }
+      }
+
+      @media screen and (min-width: 720px) {
+        width: 160px;
+      }
+
+      @media screen and (min-width: 900px) {
+        width: 180px;
+      }
 
       &:hover {
         cursor: pointer;
@@ -78,100 +95,142 @@ img { max-width: 100% }
       }
 
       &.balao-1 {
-        left: calc(50% - 90px);
-        top: calc(50% - 165px);
-        width: 120px;
+        left: calc(50% - 100px);
+        top: calc(50% - 130px);
+
+        @media screen and (min-width: 400px) {
+          left: calc(50% - 100px);
+          top: calc(50% - 140px);
+        }
+
+        @media screen and (min-width: 500px) {
+          left: calc(50% - 100px);
+          top: calc(50% - 160px);
+        }
 
         @media screen and (min-width: 600px) {
           left: calc(50% - 130px);
           top: calc(50% - 180px);
-          width: 140px;
+
+          @media screen and (orientation: landscape) {
+            left: calc(50% - 100px);
+            top: calc(50% - 130px);
+          }
         }
 
         @media screen and (min-width: 720px) {
           left: calc(50% - 160px);
-          top: calc(50% - 230px);
-          width: 160px;
+          top: calc(50% - 220px);
         }
 
         @media screen and (min-width: 900px) {
-          left: calc(50% - 190px);
-          top: calc(50% - 250px);
-          width: 180px;
+          left: calc(50% - 180px);
+          top: calc(50% - 230px);
         }
       }
 
       &.balao-2 {
-        left: calc(50% + 40px);
-        top: calc(50% - 160px);
-        width: 120px;
+        left: calc(50% + 30px);
+        top: calc(50% - 130px);
+
+        @media screen and (min-width: 400px) {
+          left: calc(50% + 40px);
+          top: calc(50% - 140px);
+        }
+
+        @media screen and (min-width: 500px) {
+          left: calc(50% + 50px);
+          top: calc(50% - 160px);
+        }
 
         @media screen and (min-width: 600px) {
           left: calc(50% + 60px);
           top: calc(50% - 200px);
-          width: 140px;
+
+          @media screen and (orientation: landscape) {
+            left: calc(50% + 30px);
+            top: calc(50% - 130px);
+          }
         }
 
         @media screen and (min-width: 720px) {
           left: calc(50% + 80px);
-          top: calc(50% - 240px);
-          width: 180px;
+          top: calc(50% - 230px);
         }
 
         @media screen and (min-width: 900px) {
-          left: calc(50% + 100px);
-          top: calc(50% - 270px);
-          width: 200px;
+          left: calc(50% + 90px);
+          top: calc(50% - 230px);
         }
       }
 
       &.balao-3 {
-        left: calc(50% - 160px);
-        top: calc(50% - 90px);
-        width: 120px;
+        left: calc(50% - 170px);
+        top: calc(50% - 70px);
 
+        @media screen and (min-width: 400px) {
+          left: calc(50% - 170px);
+          top: calc(50% - 80px);
+        }
+
+        @media screen and (min-width: 500px) {
+          left: calc(50% - 180px);
+          top: calc(50% - 90px);
+        }
 
         @media screen and (min-width: 600px) {
           left: calc(50% - 200px);
           top: calc(50% - 100px);
-          width: 150px;
+
+          @media screen and (orientation: landscape) {
+            left: calc(50% - 160px);
+            top: calc(50% - 70px);
+          }
         }
 
         @media screen and (min-width: 720px) {
-          left: calc(50% - 300px);
-          top: calc(50% - 120px);
-          width: 190px;
+          left: calc(50% - 270px);
+          top: calc(50% - 110px);
         }
 
         @media screen and (min-width: 900px) {
-          left: calc(50% - 350px);
-          top: calc(50% - 150px);
-          width: 230px;
+          left: calc(50% - 310px);
+          top: calc(50% - 120px);
         }
       }
 
       &.balao-4 {
-        left: calc(50% + 60px);
+        left: calc(50% + 70px);
         top: calc(50% - 70px);
-        width: 90px;
 
+        @media screen and (min-width: 400px) {
+          left: calc(50% + 80px);
+          top: calc(50% - 70px);
+        }
+
+        @media screen and (min-width: 500px) {
+          left: calc(50% + 100px);
+          top: calc(50% - 80px);
+        }
 
         @media screen and (min-width: 600px) {
           left: calc(50% + 90px);
           top: calc(50% - 100px);
-          width: 130px;
+
+          @media screen and (orientation: landscape) {
+            left: calc(50% + 70px);
+            top: calc(50% - 70px);
+          }
         }
 
         @media screen and (min-width: 720px) {
-          left: calc(50% + 170px);
-          top: calc(50% - 100px);
-          width: 150px;
+          left: calc(50% + 150px);
+          top: calc(50% - 110px);
         }
 
         @media screen and (min-width: 900px) {
-          left: calc(50% + 190px);
-          top: calc(50% - 120px);
-          width: 170px;
+          left: calc(50% + 170px);
+          top: calc(50% - 110px);
         }
       }
     }
