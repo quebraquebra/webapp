@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
-import { UrlService } from './../shared/service/url.service';
+import { UrlService } from '../shared/service';
 
 @Component({
   selector: 'app-quanto-custa',

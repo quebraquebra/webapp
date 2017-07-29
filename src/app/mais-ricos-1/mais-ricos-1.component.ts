@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
-import { UrlService } from './../shared/service/url.service';
+import { UrlService } from '../shared/service';
 
 @Component({
-  selector: 'app-mais-ricos',
-  templateUrl: './mais-ricos.component.html'
+  selector: 'app-mais-ricos-1',
+  templateUrl: './mais-ricos-1.component.html'
 })
-export class MaisRicosComponent {
+export class MaisRicos1Component {
 
   private _frameUrl: SafeResourceUrl;
 

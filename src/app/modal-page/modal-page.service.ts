@@ -4,7 +4,8 @@ import { ModalPage } from '.';
 import { ComoComparaComponent } from '../como-compara';
 import { EquipeComponent } from '../equipe';
 import { FolhaComponent } from '../folha';
-import { MaisRicosComponent } from '../mais-ricos';
+import { MaisRicos1Component } from '../mais-ricos-1';
+import { MaisRicos2Component } from '../mais-ricos-2';
 import { QuantoCustaComponent } from '../quanto-custa';
 import { SobreComponent } from '../sobre';
 
@@ -19,7 +20,8 @@ export class ModalPageService {
     this._components[ModalPage.COMO_COMPARA] = ComoComparaComponent;
     this._components[ModalPage.EQUIPE] = EquipeComponent;
     this._components[ModalPage.FOLHA] = FolhaComponent;
-    this._components[ModalPage.MAIS_RICOS] = MaisRicosComponent;
+    this._components[ModalPage.MAIS_RICOS_1] = MaisRicos1Component;
+    this._components[ModalPage.MAIS_RICOS_2] = MaisRicos2Component;
     this._components[ModalPage.QUANTO_CUSTA] = QuantoCustaComponent;
     this._components[ModalPage.SOBRE] = SobreComponent;
   }

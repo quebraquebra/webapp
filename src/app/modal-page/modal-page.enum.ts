@@ -2,7 +2,8 @@ export enum ModalPage {
   COMO_COMPARA,
   EQUIPE,
   FOLHA,
-  MAIS_RICOS,
+  MAIS_RICOS_1,
+  MAIS_RICOS_2,
   QUANTO_CUSTA,
   SOBRE,
 }

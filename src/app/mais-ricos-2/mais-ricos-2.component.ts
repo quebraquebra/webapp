@@ -4,15 +4,15 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { UrlService } from '../shared/service';
 
 @Component({
-  selector: 'app-como-compara',
-  templateUrl: './como-compara.component.html'
+  selector: 'app-mais-ricos-2',
+  templateUrl: './mais-ricos-2.component.html'
 })
-export class ComoComparaComponent {
+export class MaisRicos2Component {
 
   private _frameUrl: SafeResourceUrl;
 
   public constructor(private sanitizer: DomSanitizer) {
-    this._frameUrl = this.sanitizer.bypassSecurityTrustResourceUrl(UrlService.mountD3Url('bubble.html'));
+    this._frameUrl = this.sanitizer.bypassSecurityTrustResourceUrl(UrlService.mountD3Url('analise-senado-2017.html'));
   }
 
   public get frameUrl(): SafeResourceUrl {

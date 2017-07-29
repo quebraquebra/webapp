@@ -3,7 +3,7 @@ import { Http, URLSearchParams } from '@angular/http';
 
 import { Observable } from 'rxjs/Rx';
 import { FolhaCamara, FolhaCamaraFactory } from '.';
-import { UrlService } from '../../shared/service/url.service';
+import { UrlService } from '../../shared/service';
 import { GenericTableService, GenericTableFilter } from '../../shared/generic-table';
 
 export interface FolhaCamaraFilter extends GenericTableFilter {

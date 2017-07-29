@@ -7,7 +7,8 @@ import { ModalPageComponent, ModalPageDirective } from '.';
 import { ComoComparaModule, ComoComparaComponent } from '../como-compara';
 import { EquipeModule, EquipeComponent } from '../equipe';
 import { FolhaModule, FolhaComponent } from '../folha';
-import { MaisRicosModule, MaisRicosComponent } from '../mais-ricos';
+import { MaisRicos1Module, MaisRicos1Component } from '../mais-ricos-1';
+import { MaisRicos2Module, MaisRicos2Component } from '../mais-ricos-2';
 import { QuantoCustaModule, QuantoCustaComponent } from '../quanto-custa';
 import { SobreModule, SobreComponent } from '../sobre';
 
@@ -19,7 +20,8 @@ import { SobreModule, SobreComponent } from '../sobre';
     ComoComparaModule,
     EquipeModule,
     FolhaModule,
-    MaisRicosModule,
+    MaisRicos1Module,
+    MaisRicos2Module,
     QuantoCustaModule,
     SobreModule
   ],
@@ -32,7 +34,8 @@ import { SobreModule, SobreComponent } from '../sobre';
     ComoComparaComponent,
     EquipeComponent,
     FolhaComponent,
-    MaisRicosComponent,
+    MaisRicos1Component,
+    MaisRicos2Component,
     QuantoCustaComponent,
     SobreComponent
   ]
