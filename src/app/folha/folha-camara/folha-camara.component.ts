@@ -4,7 +4,7 @@ import { DecimalPipe } from '@angular/common';
 import { FolhaCamaraService, FolhaCamara, FolhaCamaraFilter } from '.';
 import { PerfilComponent } from './perfil';
 import { GenericTableConfig } from '../../shared/generic-table';
-import { quantidadesRegistros, anos, meses } from '../../shared/util/filter';
+import { quantidadesRegistros, anos, meses } from '../../shared/util';
 
 @Component({
   selector: 'app-folha-camara',

@@ -1,4 +1,5 @@
 import { Component, Type, Input, ViewChild, OnInit } from '@angular/core';
+import { Response } from '@angular/http';
 
 import { GenericTableComponent as GtComponent, GtConfig, GtTexts } from '@angular-generic-table/core';
 import { GenericTableExpandedRow, GenericTableService, GenericTableFilter, GenericTableConfig, GenericTableData, gtTexts } from '.';
@@ -9,6 +10,7 @@ import { GenericTableExpandedRow, GenericTableService, GenericTableFilter, Gener
 })
 export class GenericTableComponent<GtExpandedRow extends GenericTableExpandedRow> implements OnInit {
 
+  public errorMessage: string;
   public gtTexts: GtTexts;
   public initializedSearch: boolean;
   public total: number;
@@ -31,6 +33,7 @@ export class GenericTableComponent<GtExpandedRow extends GenericTableExpandedRow
   }
 
   public search($event?: Event): void {
+    this.errorMessage = null;
     this.genericTable.loading = true;
 
     this.service.search(this.filter).subscribe(
@@ -45,6 +48,10 @@ export class GenericTableComponent<GtExpandedRow extends GenericTableExpandedRow
           recordsAfterFilter: data.total,
           recordsAfterSearch: data.total
         }
+      },
+      (error: Response) => {
+        this.errorMessage = error.json()['message'];
+        this.genericTable.loading = false;
       }
     );
 
