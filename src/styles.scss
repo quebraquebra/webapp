@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Lalezar|Roboto');
 @import '../node_modules/font-awesome/css/font-awesome.min.css';
 @import '../node_modules/@angular-generic-table/core/css/generic-table.min.css';
-@import './assets/sass/angular-generic-table.scss';
+@import './assets/css/angular-generic-table.css';
+@import './assets/css/cssloader.css';
 
+$backgroundColor: #99fdd9;
 $buttonColor: #303e52;
 $buttonColorHover: #414f65;
 
 body {
+  background: $backgroundColor;
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
   overflow: hidden;
@@ -42,30 +45,30 @@ a:hover {
  */
 
 .btn-primary {
-  background-color: #3a3f57;
+  background: #3a3f57;
   border: none;
 
   &:focus {
-    background-color: #3a3f57;
+    background: #3a3f57;
     box-shadow: 0 0 1px #3a3f57;
   }
 
   &:hover {
-    background-color: #303e52;
+    background: #303e52;
   }
 }
 
 .btn-inactive {
-  background-color: #777;
+  background: #777;
   border: none;
 
   &:focus {
-    background-color: #777;
+    background: #777;
     box-shadow: 0 0 1px #777;
   }
 
   &:hover {
-    background-color: #6a6a6a;
+    background: #6a6a6a;
   }
 }
 
@@ -83,7 +86,6 @@ iframe.full-width {
  */
 
 #wallpaper {
-    background-color: #99fdd9;
     background-image: url(./assets/img/logo.png), url(./assets/img/wallpaper.png);
     background-position: 50%, bottom;
     background-repeat: no-repeat;
@@ -376,7 +378,7 @@ iframe.full-width {
   }
 
   .modal-content {
-    background-color: #99fdd9;
+    background: $backgroundColor;
     background-image: url(./assets/img/wallpaper.png);
     background-position: bottom;
     background-repeat: no-repeat;
@@ -422,7 +424,7 @@ iframe.full-width {
 
       .btn-bar { margin-bottom: 15px }
 
-      table { background-color: #fff }
+      table { background: #fff }
     }
   }
 }
