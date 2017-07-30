@@ -27,6 +27,17 @@ h1 { margin-bottom: 30px }
 img { max-width: 100% }
 
 /**
+ * Links
+ */
+
+a:hover {
+  cursor: pointer;
+  text-decoration: none;
+
+  img { border: none }
+}
+
+/**
  * Botões
  */
 
@@ -87,6 +98,22 @@ iframe.full-width {
 
     @media screen and (min-width: 720px) {
       background-size: auto 40%, cover;
+    }
+
+    #social-media {
+      float: right;
+      margin: 5px 5px 0 0;
+
+      img {
+        height: 30px;
+        opacity: .8;
+        transition: .5s;
+
+        &:hover {
+          opacity: 1;
+          transform: scale(1.05);
+        }
+      }
     }
 
     .balao {
