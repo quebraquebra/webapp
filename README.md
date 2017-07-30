@@ -1,30 +1,56 @@
-# QuebraQuebraWebapp
+# QuebraQuebra WebApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.3.
+Projeto do **Hackfest contra a Corrupção 2017: Tecnologia, Transparência e Cidadania**.
 
-Demo: [quebraquebra.fagnerlima.pro.br](http://quebraquebra.fagnerlima.pro.br/)
+Acesse: [quebraquebra.lsd.ufcg.edu.br](http://quebraquebra.lsd.ufcg.edu.br)
 
-## Development server
+## Links Externos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+**API pública**: [api.quebraquebra.lsd.ufcg.edu.br](http://api.quebraquebra.lsd.ufcg.edu.br/)
 
-## Code scaffolding
+**GitHub**: [github.com/quebraquebra](https://github.com/quebraquebra)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+**Facebook**: [facebook.com/quebracamaraquebrasenado](https://www.facebook.com/quebracamaraquebrasenado)
 
-## Build
+## Para os Desenvolvedores
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+### Tecnologias Utilizadas
 
-## Running unit tests
+* JavaScript
+  * [Angular](https://angular.io/)
+  * [TypeScript](https://www.typescriptlang.org/)
+  * [Node](https://nodejs.org/en/)
+  * [NPM](https://www.npmjs.com/)
+* HTML5
+* CSS3
+  * [Bootstrap 3](http://getbootstrap.com/)
+  * [Sass](http://sass-lang.com/)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Ambiente de Desenvolvimento
 
-## Running end-to-end tests
+* Node;
+* NPM.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+### Desenvolvimento
 
-## Further help
+1. Instale as dependências com o NPM.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```
+npm install
+```
+
+2. Para execução do projeto, o **@angular/cli** conta com um servidor de desenvolvimento.
+
+```
+ng serve
+```
+
+> O servidor de desenvolvimento do **@angular/cli** roda em [http://localhost:4200](http://localhost:4200).
+
+3. O *@angular/cli** também faz o *build* da aplicação.
+
+```
+ng build -prod
+```
+
+> A opção **-prod** é utilizada para *build* de produção. O resultado do processo é gerado no diretório **dist/**.
