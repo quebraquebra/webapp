@@ -117,13 +117,14 @@ iframe.full-width {
     }
 
     .balao {
-      opacity: 0.75;
+      opacity: 0.8;
       position: absolute;
       transition-duration: .2s;
 
       &:hover {
         cursor: pointer;
         opacity: 1;
+        transform: scale(1.02);
       }
 
       &.balao-1 {
