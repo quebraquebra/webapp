@@ -17,10 +17,10 @@ Acesse: [quebraquebra.lsd.ufcg.edu.br](http://quebraquebra.lsd.ufcg.edu.br)
 ### Tecnologias Utilizadas
 
 * JavaScript
-  * [Angular](https://angular.io/)
-  * [TypeScript](https://www.typescriptlang.org/)
-  * [Node](https://nodejs.org/en/)
-  * [NPM](https://www.npmjs.com/)
+  * [Angular 4](https://angular.io/)
+  * [TypeScript 2](https://www.typescriptlang.org/)
+  * [Node 8](https://nodejs.org/en/)
+  * [NPM 5](https://www.npmjs.com/)
 * HTML5
 * CSS3
   * [Bootstrap 3](http://getbootstrap.com/)
