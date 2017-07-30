@@ -54,3 +54,7 @@ ng build -prod
 ```
 
 > A opção **-prod** é utilizada para *build* de produção. O resultado do processo é gerado no diretório **dist/**.
+
+#### Outras configurações
+
+Para o consumo dos serviços externos, configure as URLs dos recursos no arquivo **src/app/shared/service/url.service.ts**.
