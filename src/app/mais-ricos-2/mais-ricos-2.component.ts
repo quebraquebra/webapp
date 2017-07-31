@@ -12,7 +12,7 @@ export class MaisRicos2Component {
   private _frameUrl: SafeResourceUrl;
 
   public constructor(private sanitizer: DomSanitizer) {
-    this._frameUrl = this.sanitizer.bypassSecurityTrustResourceUrl(UrlService.mountD3Url('analise-senado-2017.html'));
+    this._frameUrl = this.sanitizer.bypassSecurityTrustResourceUrl(UrlService.mountGraficosUrl('analise-senado.html'));
   }
 
   public get frameUrl(): SafeResourceUrl {

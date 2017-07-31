@@ -12,7 +12,7 @@ export class QuantoCustaComponent {
   private _frameUrl: SafeResourceUrl;
 
   public constructor(private sanitizer: DomSanitizer) {
-    this._frameUrl = this.sanitizer.bypassSecurityTrustResourceUrl(UrlService.mountD3Url('multiline.html'));
+    this._frameUrl = this.sanitizer.bypassSecurityTrustResourceUrl(UrlService.mountGraficosUrl('multiline.html'));
   }
 
   public get frameUrl(): SafeResourceUrl {
