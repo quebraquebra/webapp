@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ModalModule } from 'angular2-modal';
 import { BootstrapModalModule } from 'angular2-modal/plugins/bootstrap';
 import { ModalPageComponent, ModalPageDirective } from '.';
-import { ComoComparaModule, ComoComparaComponent } from '../como-compara';
+import { PublicoVsPrivadoModule, PublicoVsPrivadoComponent } from '../publico-vs-privado';
 import { EquipeModule, EquipeComponent } from '../equipe';
 import { FolhaModule, FolhaComponent } from '../folha';
 import { MaisRicos1Module, MaisRicos1Component } from '../mais-ricos-1';
@@ -17,7 +17,7 @@ import { SobreModule, SobreComponent } from '../sobre';
     CommonModule,
     ModalModule.forRoot(),
     BootstrapModalModule,
-    ComoComparaModule,
+    PublicoVsPrivadoModule,
     EquipeModule,
     FolhaModule,
     MaisRicos1Module,
@@ -31,7 +31,7 @@ import { SobreModule, SobreComponent } from '../sobre';
   ],
   exports: [ModalPageComponent],
   entryComponents: [
-    ComoComparaComponent,
+    PublicoVsPrivadoComponent,
     EquipeComponent,
     FolhaComponent,
     MaisRicos1Component,

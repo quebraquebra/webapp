@@ -4,10 +4,10 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { UrlService } from '../shared/service';
 
 @Component({
-  selector: 'app-como-compara',
-  templateUrl: './como-compara.component.html'
+  selector: 'app-publico-vs-privado',
+  templateUrl: './publico-vs-privado.component.html'
 })
-export class ComoComparaComponent {
+export class PublicoVsPrivadoComponent {
 
   private _frameUrl: SafeResourceUrl;
 

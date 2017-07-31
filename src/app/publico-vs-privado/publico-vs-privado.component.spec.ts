@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { ComoComparaComponent } from './como-compara.component';
+import { PublicoVsPrivadoComponent } from './publico-vs-privado.component';
 
-describe('ComoComparaComponent', () => {
-  let component: ComoComparaComponent;
-  let fixture: ComponentFixture<ComoComparaComponent>;
+describe('PublicoVsPrivadoComponent', () => {
+  let component: PublicoVsPrivadoComponent;
+  let fixture: ComponentFixture<PublicoVsPrivadoComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ComoComparaComponent ]
+      declarations: [ PublicoVsPrivadoComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ComoComparaComponent);
+    fixture = TestBed.createComponent(PublicoVsPrivadoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
