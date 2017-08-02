@@ -1,16 +1,15 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { Component } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 
-import { UrlService } from '../shared/service';
-import { ModalFrameComponent } from '../shared/util';
+import { ModalFrameComponent } from '../shared/component';
 
 @Component({
   selector: 'app-publico-vs-privado',
-  templateUrl: './publico-vs-privado.component.html'
+  templateUrl: '../shared/component/modal-frame/modal-frame.component.html'
 })
 export class PublicoVsPrivadoComponent extends ModalFrameComponent {
 
-  public constructor(protected sanitizer: DomSanitizer) {
+  public constructor(sanitizer: DomSanitizer) {
     super(sanitizer, 'analise-comparativa-senado.html');
   }
 }

@@ -1,8 +1,8 @@
 import { ElementRef, ViewChild } from '@angular/core';
 import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 
-import { LoaderComponent } from '../../loader';
-import { UrlService } from '../service';
+import { LoaderComponent } from '../../../loader';
+import { UrlService } from '../../service';
 
 export enum FrameStatus {
 
@@ -12,6 +12,11 @@ export enum FrameStatus {
 }
 
 export abstract class ModalFrameComponent {
+
+  public static get template(): string {
+    return `<app-loader #loader></app-loader>
+      <iframe #frame class="full-width" [src]="frameUrl" frameborder="0" (load)="loadFrame()"></iframe>`;
+  }
 
   protected frameStatus: FrameStatus = FrameStatus.NOT_INITIALIZED;
   private _frameUrl: SafeResourceUrl;
@@ -23,7 +28,7 @@ export abstract class ModalFrameComponent {
     this._frameUrl = this.sanitizer.bypassSecurityTrustResourceUrl(UrlService.mountGraficosUrl(frameUrl));
   }
 
-  public loadFrame(frame: ElementRef, loader: LoaderComponent): void {
+  public loadFrame(): void {
     switch (this.frameStatus) {
       case FrameStatus.NOT_INITIALIZED:
         this.frameStatus = FrameStatus.LOADING;
