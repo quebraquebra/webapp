@@ -4,7 +4,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { GenericTableComponent } from '.';
-import { PerfilComponent } from '../../folha-camara/perfil';
+import { PerfilComponent } from '../../folha/folha-camara/perfil';
 
 describe('GenericTableComponent', () => {
   let component: GenericTableComponent<PerfilComponent>;
