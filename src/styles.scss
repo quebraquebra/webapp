@@ -123,7 +123,9 @@ iframe.full-width {
     .balao {
       opacity: 0.8;
       position: absolute;
+      top: calc(50% - 80px);
       transition-duration: .2s;
+      width: 100px;
 
       &:hover {
         cursor: pointer;
@@ -131,203 +133,97 @@ iframe.full-width {
         transform: scale(1.02);
       }
 
-      &.balao-1 {
-        left: calc(50% - 75px);
+      @media screen and (min-width: 500px) {
+        top: calc(50% - 90px);
+        width: 110px;
+      }
+
+      @media screen and (min-width: 600px) {
+        top: calc(50% - 100px);
+        width: 130px;
+
+        @media screen and (orientation: landscape) {
+          top: calc(50% - 60px);
+          width: 80px;
+        }
+      }
+
+      @media screen and (min-width: 720px) {
+        top: calc(50% - 120px);
+        width: 150px;
+      }
+
+      @media screen and (min-width: 900px) {
         top: calc(50% - 130px);
-        width: 80px;
+        width: 160px;
+      }
+
+      @media screen and (min-width: 1200px) {
+        top: calc(50% - 150px);
+        width: 190px;
+      }
+
+      &.balao-1 {
+        left: calc(50% - 120px);
 
         @media screen and (min-width: 400px) {
-          left: calc(50% - 75px);
-          top: calc(50% - 140px);
+          left: calc(50% - 120px);
         }
 
         @media screen and (min-width: 500px) {
-          left: calc(50% - 90px);
-          top: calc(50% - 140px);
+          left: calc(50% - 140px);
         }
 
         @media screen and (min-width: 600px) {
-          left: calc(50% - 125px);
-          top: calc(50% - 180px);
-          width: 130px;
+          left: calc(50% - 160px);
 
           @media screen and (orientation: landscape) {
-            left: calc(50% - 75px);
-            top: calc(50% - 100px);
-            width: 80px;
+            left: calc(50% - 100px);
           }
         }
 
         @media screen and (min-width: 720px) {
-          left: calc(50% - 150px);
-          top: calc(50% - 200px);
-          width: 150px;
+          left: calc(50% - 180px);
         }
 
         @media screen and (min-width: 900px) {
-          left: calc(50% - 170px);
-          top: calc(50% - 210px);
-          width: 160px;
+          left: calc(50% - 200px);
+        }
+
+        @media screen and (min-width: 1200px) {
+          left: calc(50% - 230px);
         }
       }
 
       &.balao-2 {
-        left: calc(50% - 135px);
-        top: calc(50% - 85px);
-        width: 90px;
+        left: calc(50% + 40px);
 
         @media screen and (min-width: 400px) {
-          left: calc(50% - 135px);
-          top: calc(50% - 95px);
-        }
-
-        @media screen and (min-width: 500px) {
-          left: calc(50% - 155px);
-          top: calc(50% - 95px);
-        }
-
-        @media screen and (min-width: 600px) {
-          left: calc(50% - 215px);
-          top: calc(50% - 110px);
-          width: 140px;
-
-          @media screen and (orientation: landscape) {
-            left: calc(50% - 125px);
-            top: calc(50% - 65px);
-            width: 80px;
-          }
-        }
-
-        @media screen and (min-width: 720px) {
-          left: calc(50% - 250px);
-          top: calc(50% - 125px);
-          width: 150px;
-        }
-
-        @media screen and (min-width: 900px) {
-          left: calc(50% - 280px);
-          top: calc(50% - 135px);
-          width: 160px;
-        }
-      }
-
-      &.balao-3 {
-        left: calc(50% - 160px);
-        top: calc(50% - 30px);
-        width: 80px;
-
-        @media screen and (min-width: 400px) {
-          left: calc(50% - 170px);
-          top: calc(50% - 40px);
-        }
-
-        @media screen and (min-width: 500px) {
-          left: calc(50% - 190px);
-          top: calc(50% - 40px);
-        }
-
-        @media screen and (min-width: 600px) {
-          left: calc(50% - 250px);
-          top: calc(50% - 30px);
-          width: 110px;
-
-          @media screen and (orientation: landscape) {
-            left: calc(50% - 140px);
-            top: calc(50% - 20px);
-            width: 70px;
-          }
-        }
-
-        @media screen and (min-width: 720px) {
-          left: calc(50% - 300px);
-          top: calc(50% - 40px);
-          width: 140px;
-        }
-
-        @media screen and (min-width: 900px) {
-          left: calc(50% - 310px);
-          top: calc(50% - 40px);
-          width: 150px;
-        }
-      }
-
-      &.balao-4 {
-        left: calc(50% + 30px);
-        top: calc(50% - 130px);
-        width: 110px;
-
-        @media screen and (min-width: 400px) {
-          left: calc(50% + 50px);
-          top: calc(50% - 140px);
+          left: calc(50% + 60px);
         }
 
         @media screen and (min-width: 500px) {
           left: calc(50% + 70px);
-          top: calc(50% - 150px);
         }
 
         @media screen and (min-width: 600px) {
           left: calc(50% + 80px);
-          top: calc(50% - 180px);
-          width: 140px;
 
           @media screen and (orientation: landscape) {
-            left: calc(50% + 40px);
-            top: calc(50% - 110px);
-            width: 100px;
+            left: calc(50% + 45px);
           }
         }
 
         @media screen and (min-width: 720px) {
-          left: calc(50% + 100px);
-          top: calc(50% - 200px);
-          width: 170px;
+          left: calc(50% + 90px);
         }
 
         @media screen and (min-width: 900px) {
           left: calc(50% + 110px);
-          top: calc(50% - 200px);
-          width: 190px;
-        }
-      }
-
-      &.balao-5 {
-        left: calc(50% + 70px);
-        top: calc(50% - 70px);
-        width: 110px;
-
-        @media screen and (min-width: 400px) {
-          left: calc(50% + 90px);
-          top: calc(50% - 70px);
         }
 
-        @media screen and (min-width: 500px) {
-          left: calc(50% + 120px);
-          top: calc(50% - 80px);
-        }
-
-        @media screen and (min-width: 600px) {
-          left: calc(50% + 140px);
-          top: calc(50% - 100px);
-          width: 140px;
-
-          @media screen and (orientation: landscape) {
-            left: calc(50% + 80px);
-            top: calc(50% - 55px);
-            width: 110px;
-          }
-        }
-
-        @media screen and (min-width: 720px) {
-          left: calc(50% + 160px);
-          top: calc(50% - 100px);
-          width: 170px;
-        }
-
-        @media screen and (min-width: 900px) {
-          left: calc(50% + 170px);
-          top: calc(50% - 90px);
-          width: 190px;
+        @media screen and (min-width: 1200px) {
+          left: calc(50% + 130px);
         }
       }
     }
