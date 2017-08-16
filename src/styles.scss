@@ -153,7 +153,7 @@ iframe.full-width {
     }
 
     #main-menu {
-      bottom: 4rem;
+      bottom: 2rem;
       position: absolute;
       text-align: center;
       width: 100%;
@@ -173,11 +173,15 @@ iframe.full-width {
             color: $buttonColor;
             display: block;
             font-family: 'Lalezar', cursive;
-            font-size: 3.2rem;
+            font-size: 2rem;
             outline: none;
             padding: 0;
             text-decoration: none;
             transition: .5s;
+
+            @media screen and (min-height: 400px) {
+              font-size: 3rem;
+            }
           }
 
           button:hover { color: $buttonColorHover }
