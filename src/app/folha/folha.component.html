@@ -1,5 +1,14 @@
 <h1>Folhas de Pagamento</h1>
 
+<div class="alert alert-info alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+  <p>Na consulta de folhas de pagamento, você pode alternar entre as bases de dados da <b>Câmara dos Deputados</b> e do <b>Senado Federal</b> através dos botões abaixo.</p>
+  <p>Para efetuar consultas, clique no botão <b>Pesquisar</b>. Você não precisa preencher quaisquer dos campos exibidos, a não ser deseje filtrar os registros. </p>
+  <p>Para acessar mais detalhes de determinado registro, clique no nome do <b>servidor</b> (destacado em azul) para que sejam exibidos mais detalhes de sua folha de pagamento.</p>
+  <p>Para ordenar os registros conforme desejado, clique sobre o nome de qualquer coluna (por exemplo: Remuneração Fixa) para alternar entre as ordens crescente e decrescente.</p>
+</div>
+
 <div class="btn-bar">
   <button class="btn btn-primary" [ngClass]="{ 'btn-inactive': folha['CAMARA'] !== folhaSelecionada }"
     (click)="folhaSelecionada = folha['CAMARA']">
